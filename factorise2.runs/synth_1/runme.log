@@ -17,14 +17,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7748 
+INFO: Helper process launched with PID 12312 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 325.324 ; gain = 75.047
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 325.512 ; gain = 76.051
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'factorise' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:50]
 	Parameter OPERAND_WIDTH bound to: 64 - type: integer 
 	Parameter DIVIDER_WIDTH bound to: 32 - type: integer 
-	Parameter DIVIDER_COUNT bound to: 64 - type: integer 
+	Parameter DIVIDER_COUNT bound to: 68 - type: integer 
 	Parameter OPERAND_WIDTH bound to: 64 - type: integer 
 	Parameter OFFSET bound to: 0 - type: integer 
 INFO: [Synth 8-3491] module 'divtest' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:34' bound to instance 'DivTestX' of component 'divtest' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:209]
@@ -574,18 +574,46 @@ INFO: [Synth 8-638] synthesizing module 'divtest__parameterized125' [C:/Users/ti
 	Parameter OPERAND_WIDTH bound to: 64 - type: integer 
 	Parameter OFFSET bound to: 63 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'divtest__parameterized125' (1#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:48]
+	Parameter OPERAND_WIDTH bound to: 64 - type: integer 
+	Parameter OFFSET bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'divtest' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:34' bound to instance 'DivTestX' of component 'divtest' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'divtest__parameterized127' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:48]
+	Parameter OPERAND_WIDTH bound to: 64 - type: integer 
+	Parameter OFFSET bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divtest__parameterized127' (1#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:48]
+	Parameter OPERAND_WIDTH bound to: 64 - type: integer 
+	Parameter OFFSET bound to: 65 - type: integer 
+INFO: [Synth 8-3491] module 'divtest' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:34' bound to instance 'DivTestX' of component 'divtest' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'divtest__parameterized129' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:48]
+	Parameter OPERAND_WIDTH bound to: 64 - type: integer 
+	Parameter OFFSET bound to: 65 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divtest__parameterized129' (1#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:48]
+	Parameter OPERAND_WIDTH bound to: 64 - type: integer 
+	Parameter OFFSET bound to: 66 - type: integer 
+INFO: [Synth 8-3491] module 'divtest' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:34' bound to instance 'DivTestX' of component 'divtest' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'divtest__parameterized131' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:48]
+	Parameter OPERAND_WIDTH bound to: 64 - type: integer 
+	Parameter OFFSET bound to: 66 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divtest__parameterized131' (1#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:48]
+	Parameter OPERAND_WIDTH bound to: 64 - type: integer 
+	Parameter OFFSET bound to: 67 - type: integer 
+INFO: [Synth 8-3491] module 'divtest' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:34' bound to instance 'DivTestX' of component 'divtest' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'divtest__parameterized133' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:48]
+	Parameter OPERAND_WIDTH bound to: 64 - type: integer 
+	Parameter OFFSET bound to: 67 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divtest__parameterized133' (1#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:48]
 INFO: [Synth 8-3491] module 'stringsrom' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/stringsrom/hdl/stringsrom.vhd:14' bound to instance 'stringsrom_i' of component 'stringsrom' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:224]
 INFO: [Synth 8-638] synthesizing module 'stringsrom' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/stringsrom/hdl/stringsrom.vhd:27]
-INFO: [Synth 8-3491] module 'stringsrom_blk_mem_gen_0_0' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-8280-timbox/realtime/stringsrom_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'stringsrom_blk_mem_gen_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/stringsrom/hdl/stringsrom.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'stringsrom_blk_mem_gen_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-8280-timbox/realtime/stringsrom_blk_mem_gen_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'stringsrom_blk_mem_gen_0_0' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-12424-timbox/realtime/stringsrom_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'stringsrom_blk_mem_gen_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/stringsrom/hdl/stringsrom.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'stringsrom_blk_mem_gen_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-12424-timbox/realtime/stringsrom_blk_mem_gen_0_0_stub.vhdl:15]
 INFO: [Synth 8-256] done synthesizing module 'stringsrom' (2#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/stringsrom/hdl/stringsrom.vhd:27]
 INFO: [Synth 8-3491] module 'sendMessage' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:35' bound to instance 'sendmessage_i' of component 'sendMessage' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:232]
 INFO: [Synth 8-638] synthesizing module 'sendMessage' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:47]
 INFO: [Synth 8-256] done synthesizing module 'sendMessage' (3#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:47]
 INFO: [Synth 8-3491] module 'dataentry_ram' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/dataentry_ram/hdl/dataentry_ram.vhd:14' bound to instance 'dataentry_ram_i' of component 'dataentry_ram' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:245]
 INFO: [Synth 8-638] synthesizing module 'dataentry_ram' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/dataentry_ram/hdl/dataentry_ram.vhd:32]
-INFO: [Synth 8-3491] module 'dataentry_ram_blk_mem_gen_0_0' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-8280-timbox/realtime/dataentry_ram_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'dataentry_ram_blk_mem_gen_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/dataentry_ram/hdl/dataentry_ram.vhd:65]
-INFO: [Synth 8-638] synthesizing module 'dataentry_ram_blk_mem_gen_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-8280-timbox/realtime/dataentry_ram_blk_mem_gen_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'dataentry_ram_blk_mem_gen_0_0' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-12424-timbox/realtime/dataentry_ram_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'dataentry_ram_blk_mem_gen_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/dataentry_ram/hdl/dataentry_ram.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'dataentry_ram_blk_mem_gen_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-12424-timbox/realtime/dataentry_ram_blk_mem_gen_0_0_stub.vhdl:20]
 INFO: [Synth 8-256] done synthesizing module 'dataentry_ram' (4#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/dataentry_ram/hdl/dataentry_ram.vhd:32]
 INFO: [Synth 8-3491] module 'readinput' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:34' bound to instance 'readinput_i' of component 'readinput' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:258]
 INFO: [Synth 8-638] synthesizing module 'readinput' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:58]
@@ -609,19 +637,19 @@ INFO: [Synth 8-638] synthesizing module 'mux_generic_AB__parameterized1' [C:/Use
 INFO: [Synth 8-256] done synthesizing module 'mux_generic_AB__parameterized1' (7#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/mux_generic_AB.vhd:43]
 INFO: [Synth 8-3491] module 'uart' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/uart/hdl/uart.vhd:14' bound to instance 'uart_i' of component 'uart' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:313]
 INFO: [Synth 8-638] synthesizing module 'uart' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/uart/hdl/uart.vhd:32]
-INFO: [Synth 8-3491] module 'uart_UART_0_0' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-8280-timbox/realtime/uart_UART_0_0_stub.vhdl:5' bound to instance 'UART_0' of component 'uart_UART_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/uart/hdl/uart.vhd:65]
-INFO: [Synth 8-638] synthesizing module 'uart_UART_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-8280-timbox/realtime/uart_UART_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'uart_UART_0_0' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-12424-timbox/realtime/uart_UART_0_0_stub.vhdl:5' bound to instance 'UART_0' of component 'uart_UART_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/uart/hdl/uart.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'uart_UART_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-12424-timbox/realtime/uart_UART_0_0_stub.vhdl:20]
 INFO: [Synth 8-256] done synthesizing module 'uart' (8#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/uart/hdl/uart.vhd:32]
 WARNING: [Synth 8-6014] Unused sequential element c_message_welcome_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:360]
-WARNING: [Synth 8-6014] Unused sequential element c_message_confirm_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:368]
-WARNING: [Synth 8-6014] Unused sequential element c_message_vector_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:412]
-WARNING: [Synth 8-6014] Unused sequential element c_message_factorising_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:441]
-WARNING: [Synth 8-6014] Unused sequential element c_message_wasprime_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:524]
-WARNING: [Synth 8-6014] Unused sequential element c_message_foundfactor_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:526]
-WARNING: [Synth 8-6014] Unused sequential element c_divider_count_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:482]
+WARNING: [Synth 8-6014] Unused sequential element c_message_confirm_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:371]
+WARNING: [Synth 8-6014] Unused sequential element c_message_vector_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:422]
+WARNING: [Synth 8-6014] Unused sequential element c_message_factorising_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:451]
+WARNING: [Synth 8-6014] Unused sequential element c_message_wasprime_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:534]
+WARNING: [Synth 8-6014] Unused sequential element c_message_foundfactor_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:536]
+WARNING: [Synth 8-6014] Unused sequential element c_divider_count_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:492]
 INFO: [Synth 8-256] done synthesizing module 'factorise' (9#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:50]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 487.270 ; gain = 236.992
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 495.465 ; gain = 246.004
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -631,19 +659,19 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 487.270 ; gain = 236.992
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 495.465 ; gain = 246.004
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-8280-timbox/dcp7/uart_UART_0_0_in_context.xdc] for cell 'uart_i/UART_0'
-Finished Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-8280-timbox/dcp7/uart_UART_0_0_in_context.xdc] for cell 'uart_i/UART_0'
-Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-8280-timbox/dcp9/dataentry_ram_blk_mem_gen_0_0_in_context.xdc] for cell 'dataentry_ram_i/blk_mem_gen_0'
-Finished Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-8280-timbox/dcp9/dataentry_ram_blk_mem_gen_0_0_in_context.xdc] for cell 'dataentry_ram_i/blk_mem_gen_0'
-Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-8280-timbox/dcp11/stringsrom_blk_mem_gen_0_0_in_context.xdc] for cell 'stringsrom_i/blk_mem_gen_0'
-Finished Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-8280-timbox/dcp11/stringsrom_blk_mem_gen_0_0_in_context.xdc] for cell 'stringsrom_i/blk_mem_gen_0'
+Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-12424-timbox/dcp7/uart_UART_0_0_in_context.xdc] for cell 'uart_i/UART_0'
+Finished Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-12424-timbox/dcp7/uart_UART_0_0_in_context.xdc] for cell 'uart_i/UART_0'
+Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-12424-timbox/dcp9/dataentry_ram_blk_mem_gen_0_0_in_context.xdc] for cell 'dataentry_ram_i/blk_mem_gen_0'
+Finished Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-12424-timbox/dcp9/dataentry_ram_blk_mem_gen_0_0_in_context.xdc] for cell 'dataentry_ram_i/blk_mem_gen_0'
+Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-12424-timbox/dcp11/stringsrom_blk_mem_gen_0_0_in_context.xdc] for cell 'stringsrom_i/blk_mem_gen_0'
+Finished Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-12424-timbox/dcp11/stringsrom_blk_mem_gen_0_0_in_context.xdc] for cell 'stringsrom_i/blk_mem_gen_0'
 Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/constrs_1/imports/fpgaprojects/Basys3_Master.xdc]
 Finished Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/constrs_1/imports/fpgaprojects/Basys3_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/constrs_1/imports/fpgaprojects/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/factorise_propImpl.xdc].
@@ -655,18 +683,18 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 812.715 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 824.105 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'dataentry_ram_i/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'stringsrom_i/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 812.715 ; gain = 562.438
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 824.105 ; gain = 574.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 812.715 ; gain = 562.438
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 824.105 ; gain = 574.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -678,7 +706,7 @@ Applied set_property DONT_TOUCH = true for stringsrom_i/blk_mem_gen_0. (constrai
 Applied set_property DONT_TOUCH = true for uart_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for uart_i/UART_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 812.715 ; gain = 562.438
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 824.105 ; gain = 574.645
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 's_sending_reg' into 's_busy_reg' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:70]
 WARNING: [Synth 8-6014] Unused sequential element s_sending_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:70]
@@ -686,9 +714,9 @@ WARNING: [Synth 8-6014] Unused sequential element s_req_addr_reg was removed.  [
 WARNING: [Synth 8-6014] Unused sequential element v_count_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:66]
 INFO: [Synth 8-5544] ROM "s_wr_we" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "p_0_in" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element s_wr_ramaddr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:84]
-WARNING: [Synth 8-6014] Unused sequential element v_count_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:88]
-WARNING: [Synth 8-6014] Unused sequential element s_rd_ramaddr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:125]
+WARNING: [Synth 8-6014] Unused sequential element s_wr_ramaddr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:85]
+WARNING: [Synth 8-6014] Unused sequential element v_count_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:89]
+WARNING: [Synth 8-6014] Unused sequential element s_rd_ramaddr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:126]
 INFO: [Synth 8-5546] ROM "v_digit" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:73]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:73]
@@ -1041,6 +1069,10 @@ INFO: [Synth 8-802] inferred FSM for state register 'v_state_reg' in module 'div
 INFO: [Synth 8-802] inferred FSM for state register 'v_state_reg' in module 'divtest__parameterized121'
 INFO: [Synth 8-802] inferred FSM for state register 'v_state_reg' in module 'divtest__parameterized123'
 INFO: [Synth 8-802] inferred FSM for state register 'v_state_reg' in module 'divtest__parameterized125'
+INFO: [Synth 8-802] inferred FSM for state register 'v_state_reg' in module 'divtest__parameterized127'
+INFO: [Synth 8-802] inferred FSM for state register 'v_state_reg' in module 'divtest__parameterized129'
+INFO: [Synth 8-802] inferred FSM for state register 'v_state_reg' in module 'divtest__parameterized131'
+INFO: [Synth 8-802] inferred FSM for state register 'v_state_reg' in module 'divtest__parameterized133'
 INFO: [Synth 8-802] inferred FSM for state register 'v_state_reg' in module 'factorise'
 INFO: [Synth 8-5544] ROM "v_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "v_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -1692,6 +1724,46 @@ INFO: [Synth 8-3354] encoded FSM with state register 'v_state_reg' using encodin
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               01
+                 iSTATE0 |                             0010 |                               10
+                 iSTATE2 |                             0100 |                               11
+*
+                 iSTATE1 |                             1000 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'v_state_reg' using encoding 'one-hot' in module 'divtest__parameterized127'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               01
+                 iSTATE0 |                             0010 |                               10
+                 iSTATE2 |                             0100 |                               11
+*
+                 iSTATE1 |                             1000 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'v_state_reg' using encoding 'one-hot' in module 'divtest__parameterized129'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               01
+                 iSTATE0 |                             0010 |                               10
+                 iSTATE2 |                             0100 |                               11
+*
+                 iSTATE1 |                             1000 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'v_state_reg' using encoding 'one-hot' in module 'divtest__parameterized131'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               01
+                 iSTATE0 |                             0010 |                               10
+                 iSTATE2 |                             0100 |                               11
+*
+                 iSTATE1 |                             1000 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'v_state_reg' using encoding 'one-hot' in module 'divtest__parameterized133'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
                   iSTATE |                            00000 |                            00000
                  iSTATE0 |                            00001 |                            00001
                  iSTATE1 |                            00010 |                            00010
@@ -1714,67 +1786,71 @@ INFO: [Synth 8-3354] encoded FSM with state register 'v_state_reg' using encodin
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'v_state_reg' using encoding 'sequential' in module 'factorise'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 812.715 ; gain = 562.438
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 824.105 ; gain = 574.645
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+---------------+------------+----------+
 |      |RTL Partition  |Replication |Instances |
 +------+---------------+------------+----------+
-|1     |factorise__GB0 |           1|     29676|
-|2     |factorise__GB1 |           1|     27970|
-|3     |factorise__GB2 |           1|     28102|
-|4     |factorise__GB3 |           1|     27970|
-|5     |factorise__GB4 |           1|     30767|
-|6     |factorise__GB5 |           1|     30783|
-|7     |factorise__GB6 |           1|      8391|
+|1     |factorise__GB0 |           1|     24477|
+|2     |factorise__GB1 |           1|     22376|
+|3     |factorise__GB2 |           1|     25173|
+|4     |factorise__GB3 |           1|      8391|
+|5     |factorise__GB4 |           1|     11188|
+|6     |factorise__GB5 |           1|     30573|
+|7     |factorise__GB6 |           1|     25173|
+|8     |factorise__GB7 |           1|      8391|
+|9     |factorise__GB8 |           1|     30767|
+|10    |factorise__GB9 |           1|      8391|
 +------+---------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input     64 Bit       Adders := 65    
-	   2 Input     64 Bit       Adders := 63    
+	   2 Input     64 Bit       Adders := 67    
+	   3 Input     64 Bit       Adders := 69    
 	   2 Input     32 Bit       Adders := 7     
-	   2 Input     27 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 192   
+	   2 Input      6 Bit       Adders := 204   
 	   2 Input      5 Bit       Adders := 2     
 +---Registers : 
-	               64 Bit    Registers := 132   
+	               64 Bit    Registers := 140   
 	               32 Bit    Registers := 2     
-	               16 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
 	               10 Bit    Registers := 2     
 	                8 Bit    Registers := 4     
-	                6 Bit    Registers := 192   
+	                6 Bit    Registers := 204   
 	                5 Bit    Registers := 2     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 147   
+	                1 Bit    Registers := 155   
 +---Muxes : 
-	   2 Input     64 Bit        Muxes := 255   
-	   3 Input     64 Bit        Muxes := 63    
-	   4 Input     64 Bit        Muxes := 63    
+	   2 Input     64 Bit        Muxes := 271   
+	   3 Input     64 Bit        Muxes := 67    
+	   4 Input     64 Bit        Muxes := 67    
 	  12 Input     64 Bit        Muxes := 1     
-	   4 Input     32 Bit        Muxes := 1     
 	   3 Input     32 Bit        Muxes := 1     
 	  14 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 3     
 	   4 Input     10 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
 	   3 Input      8 Bit        Muxes := 1     
 	  24 Input      5 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 68    
 	  12 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 64    
-	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 4     
 	   6 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 65    
-	   2 Input      1 Bit        Muxes := 688   
-	   4 Input      1 Bit        Muxes := 258   
+	   2 Input      2 Bit        Muxes := 69    
+	   2 Input      1 Bit        Muxes := 728   
+	   3 Input      1 Bit        Muxes := 71    
+	   4 Input      1 Bit        Muxes := 274   
 	   5 Input      1 Bit        Muxes := 8     
-	   3 Input      1 Bit        Muxes := 67    
 	   6 Input      1 Bit        Muxes := 3     
 	  16 Input      1 Bit        Muxes := 1     
 	   7 Input      1 Bit        Muxes := 1     
@@ -1799,23 +1875,25 @@ Detailed RTL Component Info :
 +---Registers : 
 	               64 Bit    Registers := 2     
 	               32 Bit    Registers := 2     
-	               16 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
 	               10 Bit    Registers := 1     
 	                8 Bit    Registers := 2     
 	                1 Bit    Registers := 11    
 +---Muxes : 
 	  12 Input     64 Bit        Muxes := 1     
-	   4 Input     32 Bit        Muxes := 1     
 	   3 Input     32 Bit        Muxes := 1     
 	  14 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 2     
 	   4 Input     10 Bit        Muxes := 1     
 	   3 Input      8 Bit        Muxes := 1     
 	  24 Input      5 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 19    
+	   2 Input      3 Bit        Muxes := 1     
 	  16 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 19    
 	   7 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 1     
 	  14 Input      1 Bit        Muxes := 3     
@@ -1827,167 +1905,7 @@ Detailed RTL Component Info :
 	  18 Input      1 Bit        Muxes := 3     
 	  12 Input      1 Bit        Muxes := 2     
 	   6 Input      1 Bit        Muxes := 2     
-Module sendMessage 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     27 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 1     
-+---Registers : 
-	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
-+---Muxes : 
-	   2 Input     10 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module readinput 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      5 Bit       Adders := 2     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                5 Bit    Registers := 2     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 5     
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 3     
-	   6 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 23    
-	   5 Input      1 Bit        Muxes := 2     
-	   3 Input      1 Bit        Muxes := 2     
-	   6 Input      1 Bit        Muxes := 1     
-Module ascii2vector 
-Detailed RTL Component Info : 
-+---Adders : 
-	   3 Input     64 Bit       Adders := 1     
-+---Registers : 
-	               64 Bit    Registers := 2     
-+---Muxes : 
-	  12 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 1     
-Module mux_generic_AB 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
-Module mux_generic_AB__parameterized1 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module divtest 
-Detailed RTL Component Info : 
-+---Adders : 
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 3     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 11    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 3     
-Module divtest__parameterized1 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized3 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized5 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized7 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized9 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized11 
+Module divtest__parameterized15 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
@@ -2025,7 +1943,7 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 10    
 	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized15 
+Module divtest__parameterized11 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
@@ -2044,7 +1962,7 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 10    
 	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized35 
+Module divtest__parameterized9 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
@@ -2063,7 +1981,7 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 10    
 	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized33 
+Module divtest__parameterized7 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
@@ -2082,7 +2000,7 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 10    
 	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized31 
+Module divtest__parameterized5 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
@@ -2101,7 +2019,7 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 10    
 	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized29 
+Module divtest__parameterized3 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
@@ -2120,10 +2038,9 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 10    
 	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized27 
+Module divtest 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     64 Bit       Adders := 1     
 	   3 Input     64 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 3     
 +---Registers : 
@@ -2131,53 +2048,13 @@ Detailed RTL Component Info :
 	                6 Bit    Registers := 3     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 3     
 	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 11    
 	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized25 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized23 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized21 
+	   4 Input      1 Bit        Muxes := 3     
+Module divtest__parameterized1 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
@@ -2215,140 +2092,121 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 10    
 	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized21 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized23 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized25 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized27 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized29 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized31 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
 Module divtest__parameterized17 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized37 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized39 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized41 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized43 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized45 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized47 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized49 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
@@ -2481,7 +2339,7 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 10    
 	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized113 
+Module divtest__parameterized63 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
@@ -2500,7 +2358,7 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 10    
 	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized115 
+Module divtest__parameterized47 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
@@ -2519,6 +2377,207 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 10    
 	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized45 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized43 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized39 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized41 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized37 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized35 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized33 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized49 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module mux_generic_AB__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module mux_generic_AB 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module ascii2vector 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     64 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 2     
++---Muxes : 
+	  12 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module readinput 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 23    
+	   5 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+Module sendMessage 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 Module divtest__parameterized117 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -2596,6 +2655,120 @@ Detailed RTL Component Info :
 	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 4     
 Module divtest__parameterized125 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized127 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized129 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized131 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized133 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized115 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   3 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+Module divtest__parameterized113 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 1     
@@ -3070,25 +3243,6 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 10    
 	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 4     
-Module divtest__parameterized63 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   3 Input     64 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     64 Bit        Muxes := 4     
-	   3 Input     64 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -3114,11 +3268,10 @@ INFO: [Synth 8-3886] merging instance 's_send_message_start_addr_reg[3]' (FDE) t
 INFO: [Synth 8-3886] merging instance 's_send_message_start_addr_reg[4]' (FDE) to 's_send_message_start_addr_reg[6]'
 INFO: [Synth 8-3886] merging instance 's_send_message_start_addr_reg[5]' (FDE) to 's_send_message_start_addr_reg[6]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_send_message_start_addr_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_9/\v_division_count_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_debug_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_debug_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_debug_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_9/\v_division_count_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_9/\v_division_count_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_9/\v_division_count_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_9/\v_division_count_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_divtest_bottom_reg[32] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_divtest_bottom_reg[33] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_divtest_bottom_reg[34] )
@@ -3151,82 +3304,70 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_divtes
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_divtest_bottom_reg[61] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_divtest_bottom_reg[62] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_divtest_bottom_reg[63] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_divtest_bottom_reg[5] )
-INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\led_reg[15] )
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:16 ; elapsed = 00:01:35 . Memory (MB): peak = 826.809 ; gain = 576.531
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:01:37 . Memory (MB): peak = 917.180 ; gain = 667.719
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+---------------+------------+----------+
 |      |RTL Partition  |Replication |Instances |
 +------+---------------+------------+----------+
-|1     |factorise__GB0 |           1|     11107|
-|2     |factorise__GB1 |           1|     10530|
-|3     |factorise__GB2 |           1|     10578|
-|4     |factorise__GB3 |           1|     10532|
-|5     |factorise__GB4 |           1|     11560|
-|6     |factorise__GB5 |           1|     11555|
-|7     |factorise__GB6 |           1|      3364|
+|1     |factorise__GB0 |           1|      9536|
+|2     |factorise__GB1 |           1|      8485|
+|3     |factorise__GB2 |           1|      9504|
+|4     |factorise__GB3 |           1|      3368|
+|5     |factorise__GB4 |           1|      4392|
+|6     |factorise__GB5 |           1|     11295|
+|7     |factorise__GB6 |           1|      9511|
+|8     |factorise__GB7 |           1|      3370|
+|9     |factorise__GB8 |           1|     11545|
+|10    |factorise__GB9 |           1|      3364|
 +------+---------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:28 ; elapsed = 00:01:48 . Memory (MB): peak = 960.000 ; gain = 709.723
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:35 ; elapsed = 00:01:49 . Memory (MB): peak = 1050.371 ; gain = 800.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:45 ; elapsed = 00:02:05 . Memory (MB): peak = 1125.605 ; gain = 875.328
+Finished Timing Optimization : Time (s): cpu = 00:01:52 ; elapsed = 00:02:07 . Memory (MB): peak = 1224.055 ; gain = 974.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+---------------+------------+----------+
 |      |RTL Partition  |Replication |Instances |
 +------+---------------+------------+----------+
-|1     |factorise__GB0 |           1|     11107|
-|2     |factorise__GB1 |           1|     10034|
-|3     |factorise__GB2 |           1|     10082|
-|4     |factorise__GB3 |           1|     10033|
-|5     |factorise__GB4 |           1|     11027|
-|6     |factorise__GB5 |           1|     11022|
-|7     |factorise__GB6 |           1|      3117|
+|1     |factorise__GB0 |           1|      9113|
+|2     |factorise__GB1 |           1|      8095|
+|3     |factorise__GB2 |           1|      9081|
+|4     |factorise__GB3 |           1|      3145|
+|5     |factorise__GB4 |           1|      4135|
+|6     |factorise__GB5 |           1|     11295|
+|7     |factorise__GB6 |           1|      9088|
+|8     |factorise__GB7 |           1|      3147|
+|9     |factorise__GB8 |           1|     11055|
+|10    |factorise__GB9 |           1|      3141|
 +------+---------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:01 ; elapsed = 00:02:33 . Memory (MB): peak = 1125.605 ; gain = 875.328
+Finished Technology Mapping : Time (s): cpu = 00:02:06 ; elapsed = 00:02:27 . Memory (MB): peak = 1224.055 ; gain = 974.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+---------------+------------+----------+
 |      |RTL Partition  |Replication |Instances |
 +------+---------------+------------+----------+
-|1     |factorise__GB0 |           1|      6468|
-|2     |factorise__GB1 |           1|      5908|
-|3     |factorise__GB2 |           1|      5936|
-|4     |factorise__GB3 |           1|      5909|
-|5     |factorise__GB4 |           1|      6489|
-|6     |factorise__GB5 |           1|      6490|
+|1     |factorise__GB5 |           1|      6850|
+|2     |factorise__GB8 |           1|      6560|
 +------+---------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -3244,7 +3385,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:07 ; elapsed = 00:02:39 . Memory (MB): peak = 1125.605 ; gain = 875.328
+Finished IO Insertion : Time (s): cpu = 00:02:12 ; elapsed = 00:02:33 . Memory (MB): peak = 1224.055 ; gain = 974.594
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3257,7 +3398,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:07 ; elapsed = 00:02:39 . Memory (MB): peak = 1125.605 ; gain = 875.328
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:13 ; elapsed = 00:02:33 . Memory (MB): peak = 1224.055 ; gain = 974.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3269,25 +3410,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:12 ; elapsed = 00:02:44 . Memory (MB): peak = 1125.605 ; gain = 875.328
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:18 ; elapsed = 00:02:39 . Memory (MB): peak = 1224.055 ; gain = 974.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:12 ; elapsed = 00:02:44 . Memory (MB): peak = 1125.605 ; gain = 875.328
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:18 ; elapsed = 00:02:39 . Memory (MB): peak = 1224.055 ; gain = 974.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:13 ; elapsed = 00:02:45 . Memory (MB): peak = 1125.605 ; gain = 875.328
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:19 ; elapsed = 00:02:39 . Memory (MB): peak = 1224.055 ; gain = 974.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:13 ; elapsed = 00:02:45 . Memory (MB): peak = 1125.605 ; gain = 875.328
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:19 ; elapsed = 00:02:40 . Memory (MB): peak = 1224.055 ; gain = 974.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -3297,9 +3438,9 @@ Report BlackBoxes:
 +------+------------------------------+----------+
 |      |BlackBox name                 |Instances |
 +------+------------------------------+----------+
-|1     |stringsrom_blk_mem_gen_0_0    |         1|
+|1     |uart_UART_0_0                 |         1|
 |2     |dataentry_ram_blk_mem_gen_0_0 |         1|
-|3     |uart_UART_0_0                 |         1|
+|3     |stringsrom_blk_mem_gen_0_0    |         1|
 +------+------------------------------+----------+
 
 Report Cell Usage: 
@@ -3310,119 +3451,125 @@ Report Cell Usage:
 |2     |stringsrom_blk_mem_gen_0_0_bbox    |     1|
 |3     |uart_UART_0_0_bbox                 |     1|
 |4     |BUFG                               |     1|
-|5     |CARRY4                             |  2881|
-|6     |LUT1                               |  2144|
-|7     |LUT2                               |  5442|
-|8     |LUT3                               |  6212|
-|9     |LUT4                               |  6112|
-|10    |LUT5                               |  2471|
-|11    |LUT6                               |  2541|
-|12    |MUXF7                              |   703|
-|13    |MUXF8                              |   286|
-|14    |FDRE                               |  9311|
-|15    |FDSE                               |   900|
-|16    |LD                                 |     2|
-|17    |IBUF                               |     2|
-|18    |OBUF                               |    17|
+|5     |CARRY4                             |  3169|
+|6     |LUT1                               |  2720|
+|7     |LUT2                               |  5815|
+|8     |LUT3                               |  6630|
+|9     |LUT4                               |  6582|
+|10    |LUT5                               |  2735|
+|11    |LUT6                               |  2686|
+|12    |MUXF7                              |   832|
+|13    |MUXF8                              |   318|
+|14    |XORCY                              |     1|
+|15    |FDRE                               |  9891|
+|16    |FDSE                               |   957|
+|17    |LD                                 |     2|
+|18    |IBUF                               |     2|
+|19    |OBUF                               |    17|
 +------+-----------------------------------+------+
 
 Report Instance Areas: 
 +------+-----------------------------+-------------------------------+------+
 |      |Instance                     |Module                         |Cells |
 +------+-----------------------------+-------------------------------+------+
-|1     |top                          |                               | 39051|
-|2     |  stringsrom_i               |stringsrom                     |     8|
+|1     |top                          |                               | 42384|
+|2     |  uart_i                     |uart                           |    10|
 |3     |  dataentry_ram_i            |dataentry_ram                  |     8|
-|4     |  uart_i                     |uart                           |    10|
-|5     |  \GEN_DivTest[0].DivTestX   |divtest                        |   611|
-|6     |  \GEN_DivTest[10].DivTestX  |divtest__parameterized19       |   608|
-|7     |  \GEN_DivTest[11].DivTestX  |divtest__parameterized21       |   584|
-|8     |  \GEN_DivTest[12].DivTestX  |divtest__parameterized23       |   583|
-|9     |  \GEN_DivTest[13].DivTestX  |divtest__parameterized25       |   583|
-|10    |  \GEN_DivTest[14].DivTestX  |divtest__parameterized27       |   583|
-|11    |  \GEN_DivTest[15].DivTestX  |divtest__parameterized29       |   584|
-|12    |  \GEN_DivTest[16].DivTestX  |divtest__parameterized31       |   582|
-|13    |  \GEN_DivTest[17].DivTestX  |divtest__parameterized33       |   582|
-|14    |  \GEN_DivTest[18].DivTestX  |divtest__parameterized35       |   662|
-|15    |  \GEN_DivTest[19].DivTestX  |divtest__parameterized37       |   618|
-|16    |  \GEN_DivTest[1].DivTestX   |divtest__parameterized1        |   545|
-|17    |  \GEN_DivTest[20].DivTestX  |divtest__parameterized39       |   582|
-|18    |  \GEN_DivTest[21].DivTestX  |divtest__parameterized41       |   583|
-|19    |  \GEN_DivTest[22].DivTestX  |divtest__parameterized43       |   584|
-|20    |  \GEN_DivTest[23].DivTestX  |divtest__parameterized45       |   583|
-|21    |  \GEN_DivTest[24].DivTestX  |divtest__parameterized47       |   582|
-|22    |  \GEN_DivTest[25].DivTestX  |divtest__parameterized49       |   583|
-|23    |  \GEN_DivTest[26].DivTestX  |divtest__parameterized51       |   637|
-|24    |  \GEN_DivTest[27].DivTestX  |divtest__parameterized53       |   589|
-|25    |  \GEN_DivTest[28].DivTestX  |divtest__parameterized55       |   583|
-|26    |  \GEN_DivTest[29].DivTestX  |divtest__parameterized57       |   615|
-|27    |  \GEN_DivTest[2].DivTestX   |divtest__parameterized3        |   543|
-|28    |  \GEN_DivTest[30].DivTestX  |divtest__parameterized59       |   583|
-|29    |  \GEN_DivTest[31].DivTestX  |divtest__parameterized61       |   584|
-|30    |  \GEN_DivTest[32].DivTestX  |divtest__parameterized63       |   589|
-|31    |  \GEN_DivTest[33].DivTestX  |divtest__parameterized65       |   583|
-|32    |  \GEN_DivTest[34].DivTestX  |divtest__parameterized67       |   665|
-|33    |  \GEN_DivTest[35].DivTestX  |divtest__parameterized69       |   585|
-|34    |  \GEN_DivTest[36].DivTestX  |divtest__parameterized71       |   583|
-|35    |  \GEN_DivTest[37].DivTestX  |divtest__parameterized73       |   583|
-|36    |  \GEN_DivTest[38].DivTestX  |divtest__parameterized75       |   583|
-|37    |  \GEN_DivTest[39].DivTestX  |divtest__parameterized77       |   584|
-|38    |  \GEN_DivTest[3].DivTestX   |divtest__parameterized5        |   543|
-|39    |  \GEN_DivTest[40].DivTestX  |divtest__parameterized79       |   582|
-|40    |  \GEN_DivTest[41].DivTestX  |divtest__parameterized81       |   582|
-|41    |  \GEN_DivTest[42].DivTestX  |divtest__parameterized83       |   592|
-|42    |  \GEN_DivTest[43].DivTestX  |divtest__parameterized85       |   585|
-|43    |  \GEN_DivTest[44].DivTestX  |divtest__parameterized87       |   582|
-|44    |  \GEN_DivTest[45].DivTestX  |divtest__parameterized89       |   662|
-|45    |  \GEN_DivTest[46].DivTestX  |divtest__parameterized91       |   583|
-|46    |  \GEN_DivTest[47].DivTestX  |divtest__parameterized93       |   583|
-|47    |  \GEN_DivTest[48].DivTestX  |divtest__parameterized95       |   582|
-|48    |  \GEN_DivTest[49].DivTestX  |divtest__parameterized97       |   583|
-|49    |  \GEN_DivTest[4].DivTestX   |divtest__parameterized7        |   546|
-|50    |  \GEN_DivTest[50].DivTestX  |divtest__parameterized99       |   591|
-|51    |  \GEN_DivTest[51].DivTestX  |divtest__parameterized101      |   586|
-|52    |  \GEN_DivTest[52].DivTestX  |divtest__parameterized103      |   583|
-|53    |  \GEN_DivTest[53].DivTestX  |divtest__parameterized105      |   582|
-|54    |  \GEN_DivTest[54].DivTestX  |divtest__parameterized107      |   584|
-|55    |  \GEN_DivTest[55].DivTestX  |divtest__parameterized109      |   584|
-|56    |  \GEN_DivTest[56].DivTestX  |divtest__parameterized111      |   660|
-|57    |  \GEN_DivTest[57].DivTestX  |divtest__parameterized113      |   583|
-|58    |  \GEN_DivTest[58].DivTestX  |divtest__parameterized115      |   638|
-|59    |  \GEN_DivTest[59].DivTestX  |divtest__parameterized117      |   584|
-|60    |  \GEN_DivTest[5].DivTestX   |divtest__parameterized9        |   543|
-|61    |  \GEN_DivTest[60].DivTestX  |divtest__parameterized119      |   583|
-|62    |  \GEN_DivTest[61].DivTestX  |divtest__parameterized121      |   583|
-|63    |  \GEN_DivTest[62].DivTestX  |divtest__parameterized123      |   583|
-|64    |  \GEN_DivTest[63].DivTestX  |divtest__parameterized125      |   585|
-|65    |  \GEN_DivTest[6].DivTestX   |divtest__parameterized11       |   547|
-|66    |  \GEN_DivTest[7].DivTestX   |divtest__parameterized13       |   543|
-|67    |  \GEN_DivTest[8].DivTestX   |divtest__parameterized15       |   542|
-|68    |  \GEN_DivTest[9].DivTestX   |divtest__parameterized17       |   599|
-|69    |  UART_din_mux               |mux_generic_AB                 |     3|
-|70    |  UART_send_now_mux          |mux_generic_AB__parameterized1 |     2|
-|71    |  ascii2vector_i             |ascii2vector                   |   297|
-|72    |  readinput_i                |readinput                      |   242|
-|73    |  sendmessage_i              |sendMessage                    |   225|
+|4     |  stringsrom_i               |stringsrom                     |     8|
+|5     |  \GEN_DivTest[0].DivTestX   |divtest                        |   616|
+|6     |  \GEN_DivTest[10].DivTestX  |divtest__parameterized19       |   626|
+|7     |  \GEN_DivTest[11].DivTestX  |divtest__parameterized21       |   590|
+|8     |  \GEN_DivTest[12].DivTestX  |divtest__parameterized23       |   589|
+|9     |  \GEN_DivTest[13].DivTestX  |divtest__parameterized25       |   589|
+|10    |  \GEN_DivTest[14].DivTestX  |divtest__parameterized27       |   657|
+|11    |  \GEN_DivTest[15].DivTestX  |divtest__parameterized29       |   590|
+|12    |  \GEN_DivTest[16].DivTestX  |divtest__parameterized31       |   587|
+|13    |  \GEN_DivTest[17].DivTestX  |divtest__parameterized33       |   588|
+|14    |  \GEN_DivTest[18].DivTestX  |divtest__parameterized35       |   590|
+|15    |  \GEN_DivTest[19].DivTestX  |divtest__parameterized37       |   615|
+|16    |  \GEN_DivTest[1].DivTestX   |divtest__parameterized1        |   589|
+|17    |  \GEN_DivTest[20].DivTestX  |divtest__parameterized39       |   589|
+|18    |  \GEN_DivTest[21].DivTestX  |divtest__parameterized41       |   600|
+|19    |  \GEN_DivTest[22].DivTestX  |divtest__parameterized43       |   672|
+|20    |  \GEN_DivTest[23].DivTestX  |divtest__parameterized45       |   589|
+|21    |  \GEN_DivTest[24].DivTestX  |divtest__parameterized47       |   588|
+|22    |  \GEN_DivTest[25].DivTestX  |divtest__parameterized49       |   658|
+|23    |  \GEN_DivTest[26].DivTestX  |divtest__parameterized51       |   612|
+|24    |  \GEN_DivTest[27].DivTestX  |divtest__parameterized53       |   591|
+|25    |  \GEN_DivTest[28].DivTestX  |divtest__parameterized55       |   589|
+|26    |  \GEN_DivTest[29].DivTestX  |divtest__parameterized57       |   588|
+|27    |  \GEN_DivTest[2].DivTestX   |divtest__parameterized3        |   588|
+|28    |  \GEN_DivTest[30].DivTestX  |divtest__parameterized59       |   658|
+|29    |  \GEN_DivTest[31].DivTestX  |divtest__parameterized61       |   590|
+|30    |  \GEN_DivTest[32].DivTestX  |divtest__parameterized63       |   584|
+|31    |  \GEN_DivTest[33].DivTestX  |divtest__parameterized65       |   600|
+|32    |  \GEN_DivTest[34].DivTestX  |divtest__parameterized67       |   591|
+|33    |  \GEN_DivTest[35].DivTestX  |divtest__parameterized69       |   673|
+|34    |  \GEN_DivTest[36].DivTestX  |divtest__parameterized71       |   589|
+|35    |  \GEN_DivTest[37].DivTestX  |divtest__parameterized73       |   589|
+|36    |  \GEN_DivTest[38].DivTestX  |divtest__parameterized75       |   598|
+|37    |  \GEN_DivTest[39].DivTestX  |divtest__parameterized77       |   590|
+|38    |  \GEN_DivTest[3].DivTestX   |divtest__parameterized5        |   592|
+|39    |  \GEN_DivTest[40].DivTestX  |divtest__parameterized79       |   588|
+|40    |  \GEN_DivTest[41].DivTestX  |divtest__parameterized81       |   588|
+|41    |  \GEN_DivTest[42].DivTestX  |divtest__parameterized83       |   590|
+|42    |  \GEN_DivTest[43].DivTestX  |divtest__parameterized85       |   591|
+|43    |  \GEN_DivTest[44].DivTestX  |divtest__parameterized87       |   588|
+|44    |  \GEN_DivTest[45].DivTestX  |divtest__parameterized89       |   589|
+|45    |  \GEN_DivTest[46].DivTestX  |divtest__parameterized91       |   671|
+|46    |  \GEN_DivTest[47].DivTestX  |divtest__parameterized93       |   600|
+|47    |  \GEN_DivTest[48].DivTestX  |divtest__parameterized95       |   588|
+|48    |  \GEN_DivTest[49].DivTestX  |divtest__parameterized97       |   671|
+|49    |  \GEN_DivTest[4].DivTestX   |divtest__parameterized7        |   589|
+|50    |  \GEN_DivTest[50].DivTestX  |divtest__parameterized99       |   598|
+|51    |  \GEN_DivTest[51].DivTestX  |divtest__parameterized101      |   596|
+|52    |  \GEN_DivTest[52].DivTestX  |divtest__parameterized103      |   589|
+|53    |  \GEN_DivTest[53].DivTestX  |divtest__parameterized105      |   588|
+|54    |  \GEN_DivTest[54].DivTestX  |divtest__parameterized107      |   590|
+|55    |  \GEN_DivTest[55].DivTestX  |divtest__parameterized109      |   590|
+|56    |  \GEN_DivTest[56].DivTestX  |divtest__parameterized111      |   587|
+|57    |  \GEN_DivTest[57].DivTestX  |divtest__parameterized113      |   589|
+|58    |  \GEN_DivTest[58].DivTestX  |divtest__parameterized115      |   671|
+|59    |  \GEN_DivTest[59].DivTestX  |divtest__parameterized117      |   622|
+|60    |  \GEN_DivTest[5].DivTestX   |divtest__parameterized9        |   588|
+|61    |  \GEN_DivTest[60].DivTestX  |divtest__parameterized119      |   586|
+|62    |  \GEN_DivTest[61].DivTestX  |divtest__parameterized121      |   543|
+|63    |  \GEN_DivTest[62].DivTestX  |divtest__parameterized123      |   547|
+|64    |  \GEN_DivTest[63].DivTestX  |divtest__parameterized125      |   548|
+|65    |  \GEN_DivTest[64].DivTestX  |divtest__parameterized127      |   578|
+|66    |  \GEN_DivTest[65].DivTestX  |divtest__parameterized129      |   578|
+|67    |  \GEN_DivTest[66].DivTestX  |divtest__parameterized131      |   547|
+|68    |  \GEN_DivTest[67].DivTestX  |divtest__parameterized133      |   589|
+|69    |  \GEN_DivTest[6].DivTestX   |divtest__parameterized11       |   590|
+|70    |  \GEN_DivTest[7].DivTestX   |divtest__parameterized13       |   590|
+|71    |  \GEN_DivTest[8].DivTestX   |divtest__parameterized15       |   613|
+|72    |  \GEN_DivTest[9].DivTestX   |divtest__parameterized17       |   595|
+|73    |  UART_din_mux               |mux_generic_AB                 |     2|
+|74    |  UART_send_now_mux          |mux_generic_AB__parameterized1 |     3|
+|75    |  ascii2vector_i             |ascii2vector                   |   299|
+|76    |  readinput_i                |readinput                      |   241|
+|77    |  sendmessage_i              |sendMessage                    |   202|
 +------+-----------------------------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:13 ; elapsed = 00:02:45 . Memory (MB): peak = 1125.605 ; gain = 875.328
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:19 ; elapsed = 00:02:40 . Memory (MB): peak = 1224.055 ; gain = 974.594
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 680 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:49 ; elapsed = 00:02:33 . Memory (MB): peak = 1125.605 ; gain = 549.883
-Synthesis Optimization Complete : Time (s): cpu = 00:02:13 ; elapsed = 00:02:46 . Memory (MB): peak = 1125.605 ; gain = 875.328
+Synthesis finished with 0 errors, 0 critical warnings and 744 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:54 ; elapsed = 00:02:27 . Memory (MB): peak = 1224.055 ; gain = 645.953
+Synthesis Optimization Complete : Time (s): cpu = 00:02:19 ; elapsed = 00:02:40 . Memory (MB): peak = 1224.055 ; gain = 974.594
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 2885 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 3174 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
+  A total of 3 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 1 instances
   LD => LDCE: 2 instances
 
-645 Infos, 204 Warnings, 0 Critical Warnings and 0 Errors encountered.
+650 Infos, 204 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:23 ; elapsed = 00:02:59 . Memory (MB): peak = 1125.605 ; gain = 886.059
+synth_design: Time (s): cpu = 00:02:29 ; elapsed = 00:02:54 . Memory (MB): peak = 1224.055 ; gain = 984.418
 INFO: [Common 17-1381] The checkpoint 'C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/factorise.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1125.605 ; gain = 0.000
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.232 . Memory (MB): peak = 1125.605 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Sep  3 22:07:21 2017...
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1224.055 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.241 . Memory (MB): peak = 1224.055 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  3 23:45:09 2017...

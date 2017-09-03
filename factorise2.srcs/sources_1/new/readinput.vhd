@@ -78,7 +78,8 @@ begin
                 v_state := reset;
             elsif (reset_read = '1') then
                 v_state := readin_complete;
-            elsif (v_state = reset and begin_process = '1') then
+            -- elsif (v_state = reset and begin_process = '1') then
+            elsif (begin_process = '1') then
                 -- s_debug      <= "1010101010101001";
                 s_wr_we      <= "0";
                 s_wr_ramaddr <= (others => '0');

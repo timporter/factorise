@@ -57,7 +57,7 @@ begin
     process (clk)
         type t_state is (idle, sending);
         variable v_state  : t_state := idle;
-        variable v_count  : integer range 0 to 100000000 := 0; -- Used to delay waiting for the RAM to respond
+        variable v_count  : integer range 0 to 1000000 := 0; -- Used to delay waiting for the RAM to respond
     begin
         if (rising_edge(clk)) then
             if (v_state = idle and trigger = '1') then
@@ -75,7 +75,7 @@ begin
             elsif(v_state = sending) then
                 s_send_now <= '0';
                 v_count := v_count + 1;
-                if (v_count = 5000000) then  -- Used to delay waiting for the RAM to respond
+                if (v_count = 500000) then  -- Used to delay waiting for the RAM to respond
                     v_count := 0;
                     -- check if we got to the end of the message in the RAM
                     if (ram_data = X"00") then

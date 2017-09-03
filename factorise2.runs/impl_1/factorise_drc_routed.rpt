@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Sun Sep  3 22:10:55 2017
+| Date         : Sun Sep  3 23:48:54 2017
 | Host         : timbox running 64-bit major release  (build 9200)
 | Command      : report_drc -file factorise_drc_routed.rpt -pb factorise_drc_routed.pb -rpx factorise_drc_routed.rpx
 | Design       : factorise
@@ -50,12 +50,12 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net UART_din_mux/v_state2_out is a gated clock net sourced by a combinational pin UART_din_mux/v_state_reg_i_2/O, cell UART_din_mux/v_state_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net UART_din_mux/v_state2_out is a gated clock net sourced by a combinational pin UART_din_mux/v_state_reg_i_1__0/O, cell UART_din_mux/v_state_reg_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net UART_send_now_mux/v_state2_out is a gated clock net sourced by a combinational pin UART_send_now_mux/v_state_reg_i_1__0/O, cell UART_send_now_mux/v_state_reg_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net UART_send_now_mux/v_state2_out is a gated clock net sourced by a combinational pin UART_send_now_mux/v_state_reg_i_2/O, cell UART_send_now_mux/v_state_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 REQP-165#1 Advisory

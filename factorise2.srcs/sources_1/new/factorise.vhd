@@ -37,7 +37,7 @@ entity factorise is
   Generic (
     OPERAND_WIDTH : integer := 64; -- Even values only
     DIVIDER_WIDTH : integer := 32; -- According to my calculations this should be set to exactly OPERAND_WIDTH/2 , but who knows!
-    DIVIDER_COUNT : integer := 64  -- Degree of parallelism required.
+    DIVIDER_COUNT : integer := 68  -- Degree of parallelism required.
   );
   Port (
     clk  : in  STD_LOGIC;
@@ -353,24 +353,34 @@ begin
         
     begin
         if (rising_edge(clk)) then
-            
+            s_debug <= "0000000000000000";
             if (v_state = send_welcome) then            
                 -- send the welcome message, then move on
                 v_state := get_input;
                 s_send_message_start_addr <= c_message_welcome_addr;
                 s_send_message_trigger    <= '1';
                 s_readinput_begin_process <= '1';
+                s_debug(2 downto 0) <= "001";
             elsif (v_state = get_input) then
                 -- We're now waiting for the input reader to tell us that it got a complete message
                 s_send_message_trigger    <= '0';
                 s_readinput_begin_process <= '0';
+                s_debug(2 downto 0) <= "010";
                 if (s_readinput_msg_ready = '1' and s_readinput_char_ready = '1') then
+                    s_debug(2 downto 0) <= "011";
                     s_send_message_start_addr <= c_message_confirm_addr; -- "You entered: "
                     s_send_message_trigger    <= '1';
                     v_state := finish_get_input;
                     v_count := 0;
                 end if;
+                
+                s_debug(3) <= s_uart_read_ack;
+                
+                s_debug(15 downto 8) <= s_uart_read_dout;
+                s_debug(4) <= s_uart_read_ready;
+                
             elsif (v_state = finish_get_input) then
+                s_debug(2 downto 0) <= "100";
                 -- We're still sending "You entered: ", it appears that the s_send_message_busy does not come HI immediately so wait 50 ticks before even checking it
                 s_send_message_trigger <= '0'; -- previously we sent "You entered: ", we want to stop repeating that.
                 if (v_count < 50) then

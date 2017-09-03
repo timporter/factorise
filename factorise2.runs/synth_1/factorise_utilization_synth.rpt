@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Mon Aug 28 20:59:00 2017
+| Date         : Sun Sep  3 22:07:21 2017
 | Host         : timbox running 64-bit major release  (build 9200)
 | Command      : report_utilization -file factorise_utilization_synth.rpt -pb factorise_utilization_synth.pb
 | Design       : factorise
@@ -27,18 +27,18 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+-------------------------+------+-------+-----------+-------+
-|        Site Type        | Used | Fixed | Available | Util% |
-+-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  564 |     0 |     20800 |  2.71 |
-|   LUT as Logic          |  564 |     0 |     20800 |  2.71 |
-|   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  271 |     0 |     41600 |  0.65 |
-|   Register as Flip Flop |  269 |     0 |     41600 |  0.65 |
-|   Register as Latch     |    2 |     0 |     41600 | <0.01 |
-| F7 Muxes                |   10 |     0 |     16300 |  0.06 |
-| F8 Muxes                |    1 |     0 |      8150 |  0.01 |
-+-------------------------+------+-------+-----------+-------+
++-------------------------+-------+-------+-----------+-------+
+|        Site Type        |  Used | Fixed | Available | Util% |
++-------------------------+-------+-------+-----------+-------+
+| Slice LUTs*             | 20376 |     0 |     20800 | 97.96 |
+|   LUT as Logic          | 20376 |     0 |     20800 | 97.96 |
+|   LUT as Memory         |     0 |     0 |      9600 |  0.00 |
+| Slice Registers         | 10213 |     0 |     41600 | 24.55 |
+|   Register as Flip Flop | 10211 |     0 |     41600 | 24.55 |
+|   Register as Latch     |     2 |     0 |     41600 | <0.01 |
+| F7 Muxes                |   703 |     0 |     16300 |  4.31 |
+| F8 Muxes                |   286 |     0 |      8150 |  3.51 |
++-------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 2     |          Yes |           - |        Reset |
-| 3     |          Yes |         Set |            - |
-| 266   |          Yes |       Reset |            - |
+| 900   |          Yes |         Set |            - |
+| 9311  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,20 +149,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  266 |        Flop & Latch |
-| LUT1     |  215 |                 LUT |
-| LUT6     |  151 |                 LUT |
-| CARRY4   |   82 |          CarryLogic |
-| LUT3     |   81 |                 LUT |
-| LUT2     |   67 |                 LUT |
-| LUT5     |   56 |                 LUT |
-| LUT4     |   45 |                 LUT |
+| FDRE     | 9311 |        Flop & Latch |
+| LUT3     | 6212 |                 LUT |
+| LUT4     | 6112 |                 LUT |
+| LUT2     | 5442 |                 LUT |
+| CARRY4   | 2881 |          CarryLogic |
+| LUT6     | 2541 |                 LUT |
+| LUT5     | 2471 |                 LUT |
+| LUT1     | 2144 |                 LUT |
+| FDSE     |  900 |        Flop & Latch |
+| MUXF7    |  703 |               MuxFx |
+| MUXF8    |  286 |               MuxFx |
 | OBUF     |   17 |                  IO |
-| MUXF7    |   10 |               MuxFx |
-| FDSE     |    3 |        Flop & Latch |
 | LDCE     |    2 |        Flop & Latch |
 | IBUF     |    2 |                  IO |
-| MUXF8    |    1 |               MuxFx |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

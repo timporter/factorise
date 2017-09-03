@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Mon Aug 28 21:00:14 2017
+| Date             : Sun Sep  3 22:11:10 2017
 | Host             : timbox running 64-bit major release  (build 9200)
 | Command          : report_power -file factorise_power_routed.rpt -pb factorise_power_summary_routed.pb -rpx factorise_power_routed.rpx
 | Design           : factorise
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 0.082  |
-| Dynamic (W)              | 0.010  |
+| Total On-Chip Power (W)  | 0.160  |
+| Dynamic (W)              | 0.088  |
 | Device Static (W)        | 0.072  |
 | Effective TJA (C/W)      | 5.0    |
-| Max Ambient (C)          | 84.6   |
-| Junction Temperature (C) | 25.4   |
+| Max Ambient (C)          | 84.2   |
+| Junction Temperature (C) | 25.8   |
 | Confidence Level         | Medium |
 | Setting File             | ---    |
 | Simulation Activity File | ---    |
@@ -49,18 +49,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.003 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |     1291 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      615 |     20800 |            2.96 |
-|   CARRY4       |    <0.001 |      117 |      8150 |            1.44 |
-|   Register     |    <0.001 |      439 |     41600 |            1.06 |
-|   F7/F8 Muxes  |    <0.001 |       11 |     32600 |            0.03 |
-|   Others       |     0.000 |       36 |       --- |             --- |
-| Signals        |     0.001 |     1120 |       --- |             --- |
+| Clocks         |     0.019 |        3 |       --- |             --- |
+| Slice Logic    |     0.038 |    37844 |       --- |             --- |
+|   LUT as Logic |     0.026 |    18831 |     20800 |           90.53 |
+|   CARRY4       |     0.011 |     2913 |      8150 |           35.74 |
+|   Register     |    <0.001 |    10316 |     41600 |           24.80 |
+|   F7/F8 Muxes  |    <0.001 |      989 |     32600 |            3.03 |
+|   Others       |     0.000 |      200 |       --- |             --- |
+| Signals        |     0.027 |    21512 |       --- |             --- |
 | Block RAM      |     0.004 |        3 |        50 |            6.00 |
 | I/O            |    <0.001 |       19 |       106 |           17.92 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.082 |          |           |                 |
+| Total          |     0.160 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,7 +70,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.019 |       0.009 |      0.010 |
+| Vccint    |       1.000 |     0.098 |       0.088 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -139,20 +139,82 @@ Table of Contents
 +----------------------------------------------------+-----------+
 | Name                                               | Power (W) |
 +----------------------------------------------------+-----------+
-| factorise                                          |     0.010 |
-|   GEN_DivTest[0].DivTestX                          |    <0.001 |
-|   GEN_DivTest[1].DivTestX                          |    <0.001 |
+| factorise                                          |     0.088 |
+|   GEN_DivTest[0].DivTestX                          |     0.002 |
+|   GEN_DivTest[10].DivTestX                         |     0.001 |
+|   GEN_DivTest[11].DivTestX                         |     0.001 |
+|   GEN_DivTest[12].DivTestX                         |     0.001 |
+|   GEN_DivTest[13].DivTestX                         |     0.001 |
+|   GEN_DivTest[14].DivTestX                         |     0.001 |
+|   GEN_DivTest[15].DivTestX                         |     0.001 |
+|   GEN_DivTest[16].DivTestX                         |     0.001 |
+|   GEN_DivTest[17].DivTestX                         |     0.001 |
+|   GEN_DivTest[18].DivTestX                         |     0.001 |
+|   GEN_DivTest[19].DivTestX                         |     0.001 |
+|   GEN_DivTest[1].DivTestX                          |     0.002 |
+|   GEN_DivTest[20].DivTestX                         |     0.001 |
+|   GEN_DivTest[21].DivTestX                         |     0.001 |
+|   GEN_DivTest[22].DivTestX                         |     0.001 |
+|   GEN_DivTest[23].DivTestX                         |     0.001 |
+|   GEN_DivTest[24].DivTestX                         |     0.001 |
+|   GEN_DivTest[25].DivTestX                         |     0.001 |
+|   GEN_DivTest[26].DivTestX                         |     0.001 |
+|   GEN_DivTest[27].DivTestX                         |     0.001 |
+|   GEN_DivTest[28].DivTestX                         |     0.001 |
+|   GEN_DivTest[29].DivTestX                         |     0.001 |
+|   GEN_DivTest[2].DivTestX                          |     0.002 |
+|   GEN_DivTest[30].DivTestX                         |     0.001 |
+|   GEN_DivTest[31].DivTestX                         |     0.001 |
+|   GEN_DivTest[32].DivTestX                         |     0.001 |
+|   GEN_DivTest[33].DivTestX                         |     0.001 |
+|   GEN_DivTest[34].DivTestX                         |     0.001 |
+|   GEN_DivTest[35].DivTestX                         |     0.001 |
+|   GEN_DivTest[36].DivTestX                         |     0.001 |
+|   GEN_DivTest[37].DivTestX                         |     0.001 |
+|   GEN_DivTest[38].DivTestX                         |     0.001 |
+|   GEN_DivTest[39].DivTestX                         |     0.001 |
+|   GEN_DivTest[3].DivTestX                          |     0.002 |
+|   GEN_DivTest[40].DivTestX                         |     0.001 |
+|   GEN_DivTest[41].DivTestX                         |     0.001 |
+|   GEN_DivTest[42].DivTestX                         |     0.001 |
+|   GEN_DivTest[43].DivTestX                         |     0.001 |
+|   GEN_DivTest[44].DivTestX                         |     0.001 |
+|   GEN_DivTest[45].DivTestX                         |     0.001 |
+|   GEN_DivTest[46].DivTestX                         |     0.001 |
+|   GEN_DivTest[47].DivTestX                         |     0.001 |
+|   GEN_DivTest[48].DivTestX                         |     0.001 |
+|   GEN_DivTest[49].DivTestX                         |     0.001 |
+|   GEN_DivTest[4].DivTestX                          |     0.002 |
+|   GEN_DivTest[50].DivTestX                         |     0.001 |
+|   GEN_DivTest[51].DivTestX                         |     0.001 |
+|   GEN_DivTest[52].DivTestX                         |     0.001 |
+|   GEN_DivTest[53].DivTestX                         |     0.001 |
+|   GEN_DivTest[54].DivTestX                         |     0.001 |
+|   GEN_DivTest[55].DivTestX                         |     0.001 |
+|   GEN_DivTest[56].DivTestX                         |     0.001 |
+|   GEN_DivTest[57].DivTestX                         |     0.001 |
+|   GEN_DivTest[58].DivTestX                         |     0.001 |
+|   GEN_DivTest[59].DivTestX                         |     0.001 |
+|   GEN_DivTest[5].DivTestX                          |     0.002 |
+|   GEN_DivTest[60].DivTestX                         |     0.001 |
+|   GEN_DivTest[61].DivTestX                         |     0.001 |
+|   GEN_DivTest[62].DivTestX                         |     0.001 |
+|   GEN_DivTest[63].DivTestX                         |     0.001 |
+|   GEN_DivTest[6].DivTestX                          |     0.002 |
+|   GEN_DivTest[7].DivTestX                          |     0.002 |
+|   GEN_DivTest[8].DivTestX                          |     0.002 |
+|   GEN_DivTest[9].DivTestX                          |     0.001 |
 |   UART_din_mux                                     |    <0.001 |
 |   UART_send_now_mux                                |    <0.001 |
-|   ascii2vector_i                                   |    <0.001 |
-|   dataentry_ram_i                                  |     0.002 |
-|     blk_mem_gen_0                                  |     0.002 |
-|       U0                                           |     0.002 |
-|         inst_blk_mem_gen                           |     0.002 |
-|           gnbram.gnativebmg.native_blk_mem_gen     |     0.002 |
-|             valid.cstr                             |     0.002 |
-|               ramloop[0].ram.r                     |     0.002 |
-|                 prim_noinit.ram                    |     0.002 |
+|   ascii2vector_i                                   |     0.002 |
+|   dataentry_ram_i                                  |     0.001 |
+|     blk_mem_gen_0                                  |     0.001 |
+|       U0                                           |     0.001 |
+|         inst_blk_mem_gen                           |     0.001 |
+|           gnbram.gnativebmg.native_blk_mem_gen     |     0.001 |
+|             valid.cstr                             |     0.001 |
+|               ramloop[0].ram.r                     |     0.001 |
+|                 prim_noinit.ram                    |     0.001 |
 |   readinput_i                                      |    <0.001 |
 |   sendmessage_i                                    |    <0.001 |
 |   stringsrom_i                                     |    <0.001 |
@@ -163,11 +225,11 @@ Table of Contents
 |             valid.cstr                             |    <0.001 |
 |               ramloop[0].ram.r                     |    <0.001 |
 |                 prim_init.ram                      |    <0.001 |
-|   uart_i                                           |     0.005 |
-|     UART_0                                         |     0.005 |
-|       U0                                           |     0.005 |
-|         RX                                         |     0.001 |
-|         TX                                         |     0.001 |
+|   uart_i                                           |     0.003 |
+|     UART_0                                         |     0.003 |
+|       U0                                           |     0.003 |
+|         RX                                         |    <0.001 |
+|         TX                                         |    <0.001 |
 |         fifo_rx_queue                              |     0.001 |
 |           fifo_generator_0                         |     0.001 |
 |             U0                                     |     0.001 |
@@ -178,16 +240,16 @@ Table of Contents
 |                     v7_bi_fifo.fblk                |     0.001 |
 |                       gextw[1].gnll_fifo.inst_extd |     0.001 |
 |                         gonep.inst_prim            |     0.001 |
-|         fifo_tx_queue                              |     0.001 |
-|           fifo_generator_0                         |     0.001 |
-|             U0                                     |     0.001 |
-|               inst_fifo_gen                        |     0.001 |
-|                 gconvfifo.rf                       |     0.001 |
-|                   gbi.bi                           |     0.001 |
+|         fifo_tx_queue                              |    <0.001 |
+|           fifo_generator_0                         |    <0.001 |
+|             U0                                     |    <0.001 |
+|               inst_fifo_gen                        |    <0.001 |
+|                 gconvfifo.rf                       |    <0.001 |
+|                   gbi.bi                           |    <0.001 |
 |                     g7ser_birst.rstbt              |    <0.001 |
-|                     v7_bi_fifo.fblk                |     0.001 |
-|                       gextw[1].gnll_fifo.inst_extd |     0.001 |
-|                         gonep.inst_prim            |     0.001 |
+|                     v7_bi_fifo.fblk                |    <0.001 |
+|                       gextw[1].gnll_fifo.inst_extd |    <0.001 |
+|                         gonep.inst_prim            |    <0.001 |
 +----------------------------------------------------+-----------+
 
 

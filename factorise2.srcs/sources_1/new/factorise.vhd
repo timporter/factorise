@@ -1,21 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Company:
+-- Engineer:
+--
 -- Create Date: 12.08.2017 18:02:12
--- Design Name: 
+-- Design Name:
 -- Module Name: factorise - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name:
+-- Target Devices:
+-- Tool Versions:
+-- Description:
+--
+-- Dependencies:
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+--
 ----------------------------------------------------------------------------------
 
 
@@ -35,9 +35,9 @@ entity factorise is
 
     
   Generic (
-    OPERAND_WIDTH : integer := 8;
-    DIVIDER_WIDTH : integer := 4; -- As I understand it this should be exactly OPERAND_WIDTH/2 , but who knows!
-    DIVIDER_COUNT : integer := 2
+    OPERAND_WIDTH : integer := 64; -- Even values only
+    DIVIDER_WIDTH : integer := 32; -- According to my calculations this should be set to exactly OPERAND_WIDTH/2 , but who knows!
+    DIVIDER_COUNT : integer := 64  -- Degree of parallelism required.
   );
   Port (
     clk  : in  STD_LOGIC;
@@ -93,7 +93,7 @@ architecture Behavioral of factorise is
      );
   end component;
   
-  signal s_readinput_begin_process : STD_LOGIC                    := '0'; 
+  signal s_readinput_begin_process : STD_LOGIC                    := '0';
   signal s_readinput_advance_char  : STD_LOGIC                    := '0';
   signal s_readinput_char_ready    : STD_LOGIC                    := '0';
   signal s_readinput_dout          : STD_LOGIC_VECTOR(7 downto 0) := X"00";
@@ -112,10 +112,10 @@ architecture Behavioral of factorise is
              wr_ramdata      : out STD_LOGIC_VECTOR (7 downto 0); -- RAM data we want to write
              wr_ramaddr      : out STD_LOGIC_VECTOR (4 downto 0); -- RAM address we want to write to
              wr_we           : out STD_LOGIC_VECTOR (0 downto 0); -- RAM write enable
-             advance_char    : in  STD_LOGIC;                     -- When reading back, a HI signal here tells this to move to the next character 
+             advance_char    : in  STD_LOGIC;                     -- When reading back, a HI signal here tells this to move to the next character
              rd_ramdata      : in  STD_LOGIC_VECTOR (7 downto 0); -- Data from RAM
              rd_ramaddr      : out STD_LOGIC_VECTOR (4 downto 0); -- RAM address we want to read from
-             char_ready      : out STD_LOGIC;                     -- We output HI here to inform external circuit we now have the correct value on dout 
+             char_ready      : out STD_LOGIC;                     -- We output HI here to inform external circuit we now have the correct value on dout
              dout            : out STD_LOGIC_VECTOR (7 downto 0); -- The relevant character in the message
              msg_ready       : out STD_LOGIC;                     -- Outputs HI to signal that we have received a full message and are ready to output it
              msg_ended       : out STD_LOGIC;                     -- Outputs HI to signal to the external circuit that we have replayed the full message
@@ -123,9 +123,9 @@ architecture Behavioral of factorise is
              reset_all       : in  STD_LOGIC);                    -- HI, reset whole thing, wipe RAM
   end component;
     
-  signal s_asc2vec_trigger : STD_LOGIC                                    := '0';
-  signal s_asc2vec_reset   : STD_LOGIC                                    := '0';
-  signal s_asc2vec_char_in : STD_LOGIC_VECTOR                             := X"00";
+  signal s_asc2vec_trigger : STD_LOGIC                                      := '0';
+  signal s_asc2vec_reset   : STD_LOGIC                                      := '0';
+  signal s_asc2vec_char_in : STD_LOGIC_VECTOR(7 downto 0)                   := X"00";
   signal s_asc2vec_dout    : STD_LOGIC_VECTOR((OPERAND_WIDTH - 1) downto 0) := (others => '0');
   component ascii2vector is
       Generic (
@@ -180,38 +180,43 @@ architecture Behavioral of factorise is
     );
     end component stringsrom;
   
+  signal   s_divtest_trigger      : STD_LOGIC                                    := '0';
   signal   s_divtest_top          : STD_LOGIC_VECTOR(OPERAND_WIDTH - 1 downto 0) := (others => '0');
-  signal   s_divtest_bottom       : STD_LOGIC_VECTOR(DIVIDER_WIDTH - 1 downto 0) := (others => '0');
+  signal   s_divtest_bottom       : STD_LOGIC_VECTOR(OPERAND_WIDTH - 1 downto 0) := (others => '0');
   signal   s_divtest_perfect      : STD_LOGIC_VECTOR(DIVIDER_COUNT - 1 downto 0) := (others => '0');
-  constant c_divtest_perfect_mask : STD_LOGIC_VECTOR(DIVIDER_COUNT - 1 downto 0) := (others => '0'); 
+  signal   s_divtest_ready        : STD_LOGIC_VECTOR(DIVIDER_COUNT - 1 downto 0) := (others => '0');
+  constant c_divtest_lo_mask      : STD_LOGIC_VECTOR(DIVIDER_COUNT - 1 downto 0) := (others => '0');
+  constant c_divtest_hi_mask      : STD_LOGIC_VECTOR(DIVIDER_COUNT - 1 downto 0) := (others => '1');
     component divtest
         generic (
-            TOP_WIDTH    : integer;
-            BOTTOM_WIDTH : integer;
-            OFFSET       : integer
+            OPERAND_WIDTH : integer;
+            OFFSET        : integer
         );
         port (
             clk     : in  STD_LOGIC;
-            top     : in  STD_LOGIC_VECTOR (TOP_WIDTH - 1 downto 0);
-            bottom  : in  STD_LOGIC_VECTOR (BOTTOM_WIDTH - 1 downto 0);
+            top     : in  STD_LOGIC_VECTOR (OPERAND_WIDTH - 1 downto 0);
+            bottom  : in  STD_LOGIC_VECTOR (OPERAND_WIDTH - 1 downto 0);
+            trigger : in  STD_LOGIC;
+            ready   : out STD_LOGIC;
             perfect : out STD_LOGIC
         );
     end component;
-  
+
 begin
 
     GEN_DivTest:
     for mod_num in 0 to (DIVIDER_COUNT - 1) generate
         DivTestX : divtest
         GENERIC MAP (
-            TOP_WIDTH    => OPERAND_WIDTH,
-            BOTTOM_WIDTH => DIVIDER_WIDTH,
-            OFFSET       => mod_num
+            OPERAND_WIDTH => OPERAND_WIDTH,
+            OFFSET        => mod_num
         )
         PORT MAP (
             clk       => clk,
             top       => s_divtest_top,
             bottom    => s_divtest_bottom,
+            trigger   => s_divtest_trigger,
+            ready     => s_divtest_ready(mod_num),
             perfect   => s_divtest_perfect(mod_num)
         );
     end generate GEN_DivTest;
@@ -235,7 +240,7 @@ begin
         send_now   => s_send_message_send_now,        -- Pulse to tell external UART that this is trying to write a byte
         sending    => s_send_message_mux_priority,    -- HI to tell UART-din and UART-ready multiplexers that we want priority
         busy       => s_send_message_busy
-    ); 
+    );
 
     dataentry_ram_i: component dataentry_ram
       port map ( -- A is write, B is read
@@ -262,10 +267,10 @@ begin
        wr_ramdata      => s_dataentry_write_data,    -- RAM data we want to write
        wr_ramaddr      => s_dataentry_write_addr,    -- RAM address we want to write to
        wr_we           => s_dataentry_write_we,      -- RAM write enable
-       advance_char    => s_readinput_advance_char,  -- When reading back, a HI signal here tells this to move to the next character 
+       advance_char    => s_readinput_advance_char,  -- When reading back, a HI signal here tells this to move to the next character
        rd_ramdata      => s_dataentry_read_data,     -- Data from RAM
        rd_ramaddr      => s_dataentry_read_addr,     -- RAM address we want to read from
-       char_ready      => s_readinput_char_ready,    -- We output HI here to inform external circuit we now have the correct value on dout 
+       char_ready      => s_readinput_char_ready,    -- We output HI here to inform external circuit we now have the correct value on dout
        dout            => s_readinput_dout,          -- The relevant character in the message
        msg_ready       => s_readinput_msg_ready,     -- Outputs HI to signal that we have received a full message and are ready to output it
        msg_ended       => s_readinput_msg_ended,     -- Outputs HI to signal to external circuit that this has read back the full message
@@ -327,28 +332,29 @@ begin
         constant c_message_foundfactor_addr : STD_LOGIC_VECTOR(9 downto 0) := "1010000000"; -- I found at least one factor. The factor I found is:
         
         constant c_divider_count            : STD_LOGIC_VECTOR(DIVIDER_WIDTH - 1 downto 0) := std_logic_vector(to_unsigned(DIVIDER_COUNT, DIVIDER_WIDTH));
-        variable v_division_count           : STD_LOGIC_VECTOR(DIVIDER_WIDTH - 1 downto 0) := (others => '0');
-        variable v_half_way_there           : STD_LOGIC                                    := '0';
-        variable v_div_overflow             : STD_LOGIC                                    := '0';
-        variable v_is_prime                 : STD_LOGIC                                    := '1';
+
         variable v_factor                   : STD_LOGIC_VECTOR(DIVIDER_WIDTH - 1 downto 0) := (others => '0');
-        
         type t_state is (
             send_welcome,
             get_input, finish_get_input,
             convert_input_to_vector_begin, convert_input_to_vector_trigger, convert_input_to_vector_wait,
             display_on_uart_preamble, display_on_uart_prep, display_on_uart, display_on_uart_next_bit,
-            prep_factorisation, run_factorisation,
+            prep_factorisation, run_factorisation_delay, run_factorisation,
             prep_result, result_message, result_result, print_factor, print_factor_wait
         );
         variable v_state  : t_state   := send_welcome;
-        variable v_count  : integer   := 0;
-        variable v_readout_bit_number : integer := 0;
+        
+        variable v_division_count           : STD_LOGIC_VECTOR(DIVIDER_WIDTH - 1 downto 0) := (others => '0');
+        variable v_half_way_there           : STD_LOGIC                                    := '0';
+        variable v_div_overflow             : STD_LOGIC                                    := '0';
+        variable v_is_prime                 : STD_LOGIC                                    := '1';
+        variable v_count                    : integer                                      := 0;
+        variable v_readout_bit_number       : integer                                      := 0;
         
     begin
         if (rising_edge(clk)) then
             
-            if (v_state = send_welcome) then
+            if (v_state = send_welcome) then            
                 -- send the welcome message, then move on
                 v_state := get_input;
                 s_send_message_start_addr <= c_message_welcome_addr;
@@ -356,11 +362,6 @@ begin
                 s_readinput_begin_process <= '1';
             elsif (v_state = get_input) then
                 -- We're now waiting for the input reader to tell us that it got a complete message
-                --led(7 downto 0)  <= s_uart_read_dout;
-                --led(12 downto 8) <= s_dataentry_write_addr;
-                --led(8) <= s_uart_read_ready;
-                --led(9) <= s_readinput_msg_ready;
-                --led(10) <= s_readinput_char_ready;
                 s_send_message_trigger    <= '0';
                 s_readinput_begin_process <= '0';
                 if (s_readinput_msg_ready = '1' and s_readinput_char_ready = '1') then
@@ -389,16 +390,16 @@ begin
             elsif (v_state = convert_input_to_vector_trigger) then
                 s_asc2vec_reset  <= '0';
                 s_readinput_advance_char <= '0';
-                if (v_count < 20) then          
-                    v_count := v_count + 1;      
+                if (v_count < 20) then
+                    v_count := v_count + 1;
                 elsif (s_readinput_msg_ended = '1') then
                     v_state := display_on_uart_preamble;
                 elsif (s_readinput_char_ready = '1') then
-                    s_asc2vec_trigger    <= '1';
-                    s_asc2vec_char_in    <= s_readinput_dout;
-                    s_sendresult_message <= s_readinput_dout;
+                    s_asc2vec_trigger     <= '1';
+                    s_asc2vec_char_in     <= s_readinput_dout;
+                    s_sendresult_message  <= s_readinput_dout;
                     s_sendresult_send_now <= '1';
-                    v_state              := convert_input_to_vector_wait;
+                    v_state               := convert_input_to_vector_wait;
                 end if;
             elsif (v_state = convert_input_to_vector_wait) then
                 v_count                  := 0;
@@ -436,69 +437,82 @@ begin
                 s_sendresult_send_now    <= '0';
                 v_readout_bit_number := v_readout_bit_number + 1;
                 if (v_readout_bit_number = OPERAND_WIDTH) then
-                    v_state := prep_factorisation;
                     s_sendresult_mux_priority <= '0';
                     s_send_message_start_addr <= c_message_factorising_addr;
                     s_send_message_trigger    <= '1';
                     v_count                   := 0;
                     v_state                   := prep_factorisation;
                 else
-                    v_state := display_on_uart; 
+                    v_state                   := display_on_uart;
                 end if;
             elsif (v_state = prep_factorisation) then
                 s_send_message_trigger <= '0';
                 if (v_count < 50) then
                     v_count := v_count + 1;
                 elsif (v_count = 50 and s_send_message_busy = '0') then
-                    v_state                      := run_factorisation;
+                    v_state                      := run_factorisation_delay;
                     v_count                      := 0;
-                    v_division_count             := (others => '0');
+                    v_division_count             := (others => '0'); -- has width = DIVIDER_WIDTH
                     v_division_count(1 downto 0) := "10"; -- We skip %0 and %1, go straight to %2
                     v_half_way_there             := '0';
                     v_div_overflow               := '0';
                     s_divtest_top                <= s_asc2vec_dout;
-                    s_divtest_bottom             <= v_division_count;
+                    
+                    s_divtest_bottom                             <= (others => '0');
+                    s_divtest_bottom(DIVIDER_WIDTH - 1 downto 0) <= v_division_count;
+                    
+                    s_divtest_trigger            <= '1';
                     v_is_prime                   := '1';
                 end if;
+            elsif (v_state = run_factorisation_delay) then
+                -- We have to delay for the trigger to propagate
+                s_divtest_trigger <= '0';
+                v_state           := run_factorisation;
             elsif (v_state = run_factorisation) then
-            
-                if (s_divtest_perfect = c_divtest_perfect_mask) then
-                    -- Nothing matched.
-                    -- Is it time to terminate?
-                    if (v_div_overflow = '1') then
-                        v_state := prep_result;
+                -- First wait for everything to become ready
+                if (s_divtest_ready = c_divtest_hi_mask) then
+                    if (s_divtest_perfect = c_divtest_lo_mask) then
+                        -- Nothing matched.
+                        -- Is it time to terminate?
+                        if (v_div_overflow = '1') then
+                            -- Didn't find any results, and we overflower anyway, this is a prime
+                            v_state := prep_result;
+                        else
+                            -- We should try the next set of dividers
+                            v_division_count := v_division_count + c_divider_count;
+                            if (v_half_way_there = '1' and v_division_count(DIVIDER_WIDTH - 1) = '0') then
+                                -- We've looped round, complete this final round of division and then bail out.
+                                v_div_overflow := '1';
+                            end if;
+                            -- We need to know once we're over half way (so that next time we detect the top bit as a '0', we know we've looped round
+                            if (v_division_count(DIVIDER_WIDTH - 1) = '1') then
+                                v_half_way_there := '1';
+                            end if;
+                            s_divtest_bottom(DIVIDER_WIDTH - 1 downto 0) <= v_division_count; -- Top bits should already by zero
+                            s_divtest_trigger                            <= '1';
+                            v_state                                      := run_factorisation_delay;
+                        end if;
                     else
-                        -- we should try the next set of dividers
-                        v_division_count := v_division_count + c_divider_count;
-                        -- Have we now looped right round?
-                        if (v_half_way_there = '1' and v_division_count(DIVIDER_WIDTH - 1) = '0') then
-                            -- we should complete the next round of division, and then bail out.
-                            v_div_overflow     := '1';
-                        end if;
-                        -- Are we over half way?
-                        if (v_division_count(DIVIDER_WIDTH - 1) = '1') then
-                            v_half_way_there := '1';
-                        end if;
-                        s_divtest_bottom <= v_division_count;
+                        -- something actually matched, we found a factor
+                        v_state := prep_result;
                     end if;
-                else
-                    -- Something matched, what was it?
-                    v_state := prep_result;
                 end if;
             elsif (v_state = prep_result) then
                 -- Use v_count to loop through all the bits in the perfect vector
-                if (s_divtest_perfect = c_divtest_perfect_mask) then
+                if (s_divtest_perfect = c_divtest_lo_mask) then
                     -- It was a prime
                     v_is_prime := '1';
-                    v_state := result_message;
+                    v_state    := result_message;
                 else
                     -- Go from LSB to MSB
                     if (s_divtest_perfect(v_count) = '1') then
                         -- we found it
                         -- The factor is v_count plus whatever the offset originally was
-                        v_factor := v_division_count + std_logic_vector(to_unsigned(v_count, DIVIDER_WIDTH));
-                        v_is_prime := '0';
-                        v_state := result_message;
+                        v_factor            := v_division_count + std_logic_vector(to_unsigned(v_count, DIVIDER_WIDTH));
+                        -- s_debug(15 downto 8) <= v_division_count;
+                        -- s_debug(15 downto 0) <= v_division_count + std_logic_vector(to_unsigned(v_count, DIVIDER_WIDTH));
+                        v_is_prime          := '0';
+                        v_state             := result_message;
                     else
                         -- We didn't find it here, move on
                         v_count := v_count + 1;
@@ -506,15 +520,15 @@ begin
                 end if;
             elsif (v_state = result_message) then
                 s_sendresult_mux_priority <= '0'; -- Allow the sendMESSAGE circuit to grab priority
-                if (v_is_prime = '1') then    
+                if (v_is_prime = '1') then
                     s_send_message_start_addr <= c_message_wasprime_addr; -- "...was a prime..."
-                 else
+                else
                     s_send_message_start_addr <= c_message_foundfactor_addr; -- "..found factor..."
-                 end if;
-                 s_send_message_trigger    <= '1';
-                 v_count                   := 0;
-                 v_state                   := result_result;
-             elsif (v_state = result_result) then
+                end if;
+                s_send_message_trigger    <= '1';
+                v_count                   := 0;
+                v_state                   := result_result;
+            elsif (v_state = result_result) then
                 s_send_message_trigger <= '0';
                 if (v_count < 50) then
                     v_count := v_count + 1;
@@ -523,7 +537,7 @@ begin
                         v_state := send_welcome;
                     else
                         v_state              := print_factor;
-                        v_readout_bit_number := 0; 
+                        v_readout_bit_number := 0;
                     end if;
                 end if;
             elsif (v_state = print_factor) then
@@ -535,37 +549,24 @@ begin
                     s_sendresult_message <= "00110000";
                 end if;
                 v_state := print_factor_wait;
+                v_count := 0;
             elsif (v_state = print_factor_wait) then
                 s_sendresult_send_now  <= '0';
-                v_readout_bit_number   := v_readout_bit_number + 1;
-                if (v_readout_bit_number = OPERAND_WIDTH) then
-                    s_sendresult_mux_priority <= '0';
-                    v_state                   := send_welcome;
-                    v_count                   := 0;
-                    v_readout_bit_number      := 0;
+                if (v_count < 50) then
+                    v_count := v_count + 1;
+                else
+                    v_readout_bit_number   := v_readout_bit_number + 1;
+                    if (v_readout_bit_number = DIVIDER_WIDTH) then
+                        s_sendresult_mux_priority <= '0';
+                        v_state                   := send_welcome;
+                        v_count                   := 0;
+                        v_readout_bit_number      := 0;
+                    else
+                        v_state := print_factor;
+                    end if;
                 end if;
             end if;
             
-            case v_state is
-                when send_welcome                    => s_debug <= "0000000000000001";
-                when get_input                       => s_debug <= "0000000000000010";
-                when finish_get_input                => s_debug <= "0000000000000100";
-                when convert_input_to_vector_begin   => s_debug <= "0000000000001000";
-                when convert_input_to_vector_trigger => s_debug <= "0000000000010000";
-                when convert_input_to_vector_wait    => s_debug <= "0000000000100000";
-                when display_on_uart_preamble        => s_debug <= "0000000001000000";
-                when display_on_uart_prep            => s_debug <= "0000000010000000";
-                when display_on_uart                 => s_debug <= "0000000100000000";
-                when display_on_uart_next_bit        => s_debug <= "0000001000000000";
-                when prep_factorisation              => s_debug <= "0000010000000000";
-                when run_factorisation               => s_debug <= "0000100000000000";
-                when prep_result                     => s_debug <= "0001000000000000";
-                when result_message                  => s_debug <= "0010000000000000";
-                when result_result                   => s_debug <= "0100000000000000";
-                when print_factor                    => s_debug <= "1000000000000000";
-                when print_factor_wait               => s_debug <= "1111000011110000";
-                when others                          => s_debug <= "1010101010101010";
-            end case;
             led <= s_debug;
             
         end if;

@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sun Aug 13 23:30:00 2017
+# Process ID: 10964
+# Current directory: C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/stringsrom_blk_mem_gen_0_0_synth_1
+# Command line: vivado.exe -log stringsrom_blk_mem_gen_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source stringsrom_blk_mem_gen_0_0.tcl
+# Log file: C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/stringsrom_blk_mem_gen_0_0_synth_1/stringsrom_blk_mem_gen_0_0.vds
+# Journal file: C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/stringsrom_blk_mem_gen_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source stringsrom_blk_mem_gen_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 321.465 ; gain = 81.414
+INFO: [Synth 8-638] synthesizing module 'stringsrom_blk_mem_gen_0_0' [c:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/stringsrom/ip/stringsrom_blk_mem_gen_0_0/synth/stringsrom_blk_mem_gen_0_0.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'stringsrom_blk_mem_gen_0_0' (9#1) [c:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/stringsrom/ip/stringsrom_blk_mem_gen_0_0/synth/stringsrom_blk_mem_gen_0_0.vhd:68]
+Finished RTL Elaboration : Time (s): cpu = 00:00:50 ; elapsed = 00:00:50 . Memory (MB): peak = 527.125 ; gain = 287.074
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:50 ; elapsed = 00:00:50 . Memory (MB): peak = 527.125 ; gain = 287.074
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 582.633 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 582.633 ; gain = 342.582
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 582.633 ; gain = 342.582
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 582.633 ; gain = 342.582
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 582.633 ; gain = 342.582
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:01 . Memory (MB): peak = 582.633 ; gain = 342.582
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 609.941 ; gain = 369.891
+Finished Timing Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 609.941 ; gain = 369.891
+Finished Technology Mapping : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 619.082 ; gain = 379.031
+Finished IO Insertion : Time (s): cpu = 00:01:13 ; elapsed = 00:01:13 . Memory (MB): peak = 619.082 ; gain = 379.031
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:13 ; elapsed = 00:01:13 . Memory (MB): peak = 619.082 ; gain = 379.031
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:13 ; elapsed = 00:01:13 . Memory (MB): peak = 619.082 ; gain = 379.031
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:13 . Memory (MB): peak = 619.082 ; gain = 379.031
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:01:13 . Memory (MB): peak = 619.082 ; gain = 379.031
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:13 ; elapsed = 00:01:13 . Memory (MB): peak = 619.082 ; gain = 379.031
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |RAMB18E1 |     1|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:13 ; elapsed = 00:01:13 . Memory (MB): peak = 619.082 ; gain = 379.031
+synth_design: Time (s): cpu = 00:01:13 ; elapsed = 00:01:15 . Memory (MB): peak = 631.609 ; gain = 393.184

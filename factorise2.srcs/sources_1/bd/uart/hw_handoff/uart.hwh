@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Aug 26 12:10:28 2017" VIVADOVERSION="2017.2">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="uart" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="RsRx" SIGIS="undef" SIGNAME="External_Ports_RsRx">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_0" PORT="RsRx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="RsTx" SIGIS="undef" SIGNAME="UART_0_RsTx">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_0" PORT="RsTx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="read_ack" SIGIS="undef" SIGNAME="External_Ports_read_ack">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_0" PORT="read_ack"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="read_dout" RIGHT="0" SIGIS="undef" SIGNAME="UART_0_read_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_0" PORT="read_dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="read_ready" SIGIS="undef" SIGNAME="UART_0_read_ready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_0" PORT="read_ready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="send_delay" SIGIS="undef" SIGNAME="External_Ports_send_delay">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_0" PORT="send_delay"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="send_din" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_send_din">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_0" PORT="send_din"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="send_ready" SIGIS="undef" SIGNAME="External_Ports_send_ready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_0" PORT="send_ready"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/UART_0" HWVERSION="2.0" INSTANCE="UART_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="UART" VLNV="xilinx.com:user:UART:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="uart_UART_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RsRx" SIGIS="undef" SIGNAME="External_Ports_RsRx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RsRx"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="RsTx" SIGIS="undef" SIGNAME="UART_0_RsTx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RsTx"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="read_ready" SIGIS="undef" SIGNAME="UART_0_read_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="read_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="read_dout" RIGHT="0" SIGIS="undef" SIGNAME="UART_0_read_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="read_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="read_ack" SIGIS="undef" SIGNAME="External_Ports_read_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="read_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="send_din" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_send_din">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="send_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="send_ready" SIGIS="undef" SIGNAME="External_Ports_send_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="send_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="send_delay" SIGIS="undef" SIGNAME="External_Ports_send_delay">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="send_delay"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

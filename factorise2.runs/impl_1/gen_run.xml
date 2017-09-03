@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1503950291">
+  <File Type="PWROPT-DRC" Name="factorise_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="factorise_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="factorise_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="factorise_power_routed.rpx"/>
+  <File Type="PA-TCL" Name="factorise.tcl"/>
+  <File Type="OPT-HWDEF" Name="factorise.hwdef"/>
+  <File Type="RDI-RDI" Name="factorise.vdi"/>
+  <File Type="OPT-DCP" Name="factorise_opt.dcp"/>
+  <File Type="OPT-DRC" Name="factorise_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="factorise_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="factorise_pwropt.dcp"/>
+  <File Type="PWROPT-TIMING" Name="factorise_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="factorise_placed.dcp"/>
+  <File Type="PLACE-IO" Name="factorise_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="factorise_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="factorise_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="factorise_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="factorise_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="factorise_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="factorise_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="factorise_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="factorise_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="factorise_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="factorise_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="factorise_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="factorise_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="factorise_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="factorise_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="factorise_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="factorise_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="factorise_drc_routed.pb"/>
+  <File Type="BG-BIN" Name="factorise.bin"/>
+  <File Type="ROUTE-DRC-RPX" Name="factorise_drc_routed.rpx"/>
+  <File Type="BG-DRC" Name="factorise.drc"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="factorise_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="factorise.msk"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="factorise_methodology_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="factorise.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="factorise_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="factorise_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="factorise_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="factorise_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="factorise_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="factorise_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="factorise_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="factorise_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="factorise_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="factorise_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="factorise_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="factorise_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="factorise_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="factorise_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="factorise_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="factorise.bit"/>
+  <File Type="BITSTR-RBT" Name="factorise.rbt"/>
+  <File Type="BITSTR-NKY" Name="factorise.nky"/>
+  <File Type="BITSTR-BMM" Name="factorise_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="factorise.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="factorise.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/uart/uart.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/dataentry_ram/dataentry_ram.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/stringsrom/stringsrom.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ascii2vector.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/divtest.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux_generic_AB.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/readinput.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sendMessage.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/factorise.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/stringsrom/ip/stringsrom_blk_mem_gen_0_0/stringsrom.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="factorise"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/fpgaprojects/Basys3_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Basys3_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1501013392"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1">
+      <Option Id="Directive">2</Option>
+    </Step>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="uart_UART_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="stringsrom_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dataentry_ram_blk_mem_gen_0_0"/>
+</GenRun>

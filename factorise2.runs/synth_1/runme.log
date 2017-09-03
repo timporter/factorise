@@ -1,0 +1,568 @@
+
+*** Running vivado
+    with args -log factorise.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source factorise.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source factorise.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/tim/fpgaprojects/useful-components/UART'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+Command: synth_design -top factorise -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7884 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 325.625 ; gain = 76.055
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'factorise' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:50]
+	Parameter OPERAND_WIDTH bound to: 8 - type: integer 
+	Parameter DIVIDER_WIDTH bound to: 4 - type: integer 
+	Parameter DIVIDER_COUNT bound to: 2 - type: integer 
+	Parameter TOP_WIDTH bound to: 8 - type: integer 
+	Parameter BOTTOM_WIDTH bound to: 4 - type: integer 
+	Parameter OFFSET bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'divtest' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:34' bound to instance 'DivTestX' of component 'divtest' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:205]
+INFO: [Synth 8-638] synthesizing module 'divtest' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:46]
+	Parameter TOP_WIDTH bound to: 8 - type: integer 
+	Parameter BOTTOM_WIDTH bound to: 4 - type: integer 
+	Parameter OFFSET bound to: 0 - type: integer 
+WARNING: [Synth 8-614] signal 's_perfect' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'divtest' (1#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:46]
+	Parameter TOP_WIDTH bound to: 8 - type: integer 
+	Parameter BOTTOM_WIDTH bound to: 4 - type: integer 
+	Parameter OFFSET bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'divtest' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:34' bound to instance 'DivTestX' of component 'divtest' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:205]
+INFO: [Synth 8-638] synthesizing module 'divtest__parameterized1' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:46]
+	Parameter TOP_WIDTH bound to: 8 - type: integer 
+	Parameter BOTTOM_WIDTH bound to: 4 - type: integer 
+	Parameter OFFSET bound to: 1 - type: integer 
+WARNING: [Synth 8-614] signal 's_perfect' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'divtest__parameterized1' (1#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/divtest.vhd:46]
+INFO: [Synth 8-3491] module 'stringsrom' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/stringsrom/hdl/stringsrom.vhd:14' bound to instance 'stringsrom_i' of component 'stringsrom' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'stringsrom' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/stringsrom/hdl/stringsrom.vhd:27]
+INFO: [Synth 8-3491] module 'stringsrom_blk_mem_gen_0_0' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-14904-timbox/realtime/stringsrom_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'stringsrom_blk_mem_gen_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/stringsrom/hdl/stringsrom.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'stringsrom_blk_mem_gen_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-14904-timbox/realtime/stringsrom_blk_mem_gen_0_0_stub.vhdl:15]
+INFO: [Synth 8-256] done synthesizing module 'stringsrom' (2#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/stringsrom/hdl/stringsrom.vhd:27]
+INFO: [Synth 8-3491] module 'sendMessage' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:35' bound to instance 'sendmessage_i' of component 'sendMessage' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:227]
+INFO: [Synth 8-638] synthesizing module 'sendMessage' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:47]
+WARNING: [Synth 8-614] signal 's_req_addr' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:57]
+WARNING: [Synth 8-614] signal 's_send_now' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:57]
+WARNING: [Synth 8-614] signal 's_sending' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:57]
+WARNING: [Synth 8-614] signal 's_busy' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'sendMessage' (3#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:47]
+INFO: [Synth 8-3491] module 'dataentry_ram' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/dataentry_ram/hdl/dataentry_ram.vhd:14' bound to instance 'dataentry_ram_i' of component 'dataentry_ram' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'dataentry_ram' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/dataentry_ram/hdl/dataentry_ram.vhd:32]
+INFO: [Synth 8-3491] module 'dataentry_ram_blk_mem_gen_0_0' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-14904-timbox/realtime/dataentry_ram_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'dataentry_ram_blk_mem_gen_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/dataentry_ram/hdl/dataentry_ram.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'dataentry_ram_blk_mem_gen_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-14904-timbox/realtime/dataentry_ram_blk_mem_gen_0_0_stub.vhdl:20]
+INFO: [Synth 8-256] done synthesizing module 'dataentry_ram' (4#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/dataentry_ram/hdl/dataentry_ram.vhd:32]
+INFO: [Synth 8-3491] module 'readinput' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:34' bound to instance 'readinput_i' of component 'readinput' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:253]
+INFO: [Synth 8-638] synthesizing module 'readinput' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:58]
+WARNING: [Synth 8-614] signal 's_wr_ramaddr' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:72]
+WARNING: [Synth 8-614] signal 'rd_ramdata' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:72]
+WARNING: [Synth 8-614] signal 's_msg_ready' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:72]
+WARNING: [Synth 8-614] signal 's_wr_we' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:72]
+WARNING: [Synth 8-614] signal 's_uart_read_ack' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:72]
+WARNING: [Synth 8-614] signal 's_wr_ramdata' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:72]
+WARNING: [Synth 8-614] signal 's_char_ready' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:72]
+WARNING: [Synth 8-614] signal 's_msg_ended' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:72]
+WARNING: [Synth 8-614] signal 's_rd_ramaddr' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:72]
+WARNING: [Synth 8-614] signal 's_debug' is read in the process but is not in the sensitivity list [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'readinput' (5#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:58]
+	Parameter OUTPUT_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'ascii2vector' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/ascii2vector.vhd:34' bound to instance 'ascii2vector_i' of component 'ascii2vector' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:276]
+INFO: [Synth 8-638] synthesizing module 'ascii2vector' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/ascii2vector.vhd:46]
+	Parameter OUTPUT_WIDTH bound to: 8 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element v_result_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/ascii2vector.vhd:57]
+WARNING: [Synth 8-6014] Unused sequential element v_digit_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/ascii2vector.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'ascii2vector' (6#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/ascii2vector.vhd:46]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'mux_generic_AB' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/mux_generic_AB.vhd:34' bound to instance 'UART_din_mux' of component 'mux_generic_AB' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:288]
+INFO: [Synth 8-638] synthesizing module 'mux_generic_AB' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/mux_generic_AB.vhd:43]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux_generic_AB' (7#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/mux_generic_AB.vhd:43]
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'mux_generic_AB' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/mux_generic_AB.vhd:34' bound to instance 'UART_send_now_mux' of component 'mux_generic_AB' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:298]
+INFO: [Synth 8-638] synthesizing module 'mux_generic_AB__parameterized1' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/mux_generic_AB.vhd:43]
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux_generic_AB__parameterized1' (7#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/mux_generic_AB.vhd:43]
+INFO: [Synth 8-3491] module 'uart' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/uart/hdl/uart.vhd:14' bound to instance 'uart_i' of component 'uart' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:308]
+INFO: [Synth 8-638] synthesizing module 'uart' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/uart/hdl/uart.vhd:32]
+INFO: [Synth 8-3491] module 'uart_UART_0_0' declared at 'C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-14904-timbox/realtime/uart_UART_0_0_stub.vhdl:5' bound to instance 'UART_0' of component 'uart_UART_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/uart/hdl/uart.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'uart_UART_0_0' [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-14904-timbox/realtime/uart_UART_0_0_stub.vhdl:20]
+INFO: [Synth 8-256] done synthesizing module 'uart' (8#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/uart/hdl/uart.vhd:32]
+WARNING: [Synth 8-6014] Unused sequential element c_message_welcome_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:354]
+WARNING: [Synth 8-6014] Unused sequential element c_message_confirm_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:367]
+WARNING: [Synth 8-6014] Unused sequential element c_message_vector_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:411]
+WARNING: [Synth 8-6014] Unused sequential element c_message_factorising_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:441]
+WARNING: [Synth 8-6014] Unused sequential element c_message_wasprime_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:510]
+WARNING: [Synth 8-6014] Unused sequential element c_message_foundfactor_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:512]
+WARNING: [Synth 8-6014] Unused sequential element c_divider_count_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:472]
+INFO: [Synth 8-256] done synthesizing module 'factorise' (9#1) [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:50]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 369.711 ; gain = 120.141
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 369.711 ; gain = 120.141
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-14904-timbox/dcp7/uart_UART_0_0_in_context.xdc] for cell 'uart_i/UART_0'
+Finished Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-14904-timbox/dcp7/uart_UART_0_0_in_context.xdc] for cell 'uart_i/UART_0'
+Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-14904-timbox/dcp9/dataentry_ram_blk_mem_gen_0_0_in_context.xdc] for cell 'dataentry_ram_i/blk_mem_gen_0'
+Finished Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-14904-timbox/dcp9/dataentry_ram_blk_mem_gen_0_0_in_context.xdc] for cell 'dataentry_ram_i/blk_mem_gen_0'
+Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-14904-timbox/dcp11/stringsrom_blk_mem_gen_0_0_in_context.xdc] for cell 'stringsrom_i/blk_mem_gen_0'
+Finished Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/.Xil/Vivado-14904-timbox/dcp11/stringsrom_blk_mem_gen_0_0_in_context.xdc] for cell 'stringsrom_i/blk_mem_gen_0'
+Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/constrs_1/imports/fpgaprojects/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/constrs_1/imports/fpgaprojects/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/constrs_1/imports/fpgaprojects/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/factorise_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/factorise_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 673.676 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'dataentry_ram_i/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'stringsrom_i/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 673.676 ; gain = 424.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 673.676 ; gain = 424.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for dataentry_ram_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for dataentry_ram_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for stringsrom_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for stringsrom_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for uart_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for uart_i/UART_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 673.676 ; gain = 424.105
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 's_sending_reg' into 's_busy_reg' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:70]
+WARNING: [Synth 8-6014] Unused sequential element s_sending_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:70]
+WARNING: [Synth 8-6014] Unused sequential element s_req_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:65]
+WARNING: [Synth 8-6014] Unused sequential element v_count_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:66]
+INFO: [Synth 8-5544] ROM "s_wr_we" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_0_in" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element s_wr_ramaddr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element v_count_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:88]
+WARNING: [Synth 8-6014] Unused sequential element s_rd_ramaddr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:125]
+INFO: [Synth 8-5546] ROM "v_digit" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "s_perfect" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_perfect" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 's_divtest_bottom_reg[3:0]' into 'v_division_count_reg[3:0]' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:214]
+WARNING: [Synth 8-6014] Unused sequential element s_divtest_bottom_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:214]
+INFO: [Synth 8-5546] ROM "s_send_message_start_addr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_send_message_trigger" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_readinput_begin_process" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_sendresult_mux_priority" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_asc2vec_trigger" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_asc2vec_reset" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element v_readout_bit_number_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:425]
+WARNING: [Synth 8-6014] Unused sequential element v_division_count_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:214]
+WARNING: [Synth 8-327] inferring latch for variable 'v_state_reg' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/mux_generic_AB.vhd:51]
+WARNING: [Synth 8-327] inferring latch for variable 'v_state_reg' [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/mux_generic_AB.vhd:51]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 673.676 ; gain = 424.105
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
+	   2 Input     27 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 4     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 7     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 20    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   6 Input     32 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   6 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 30    
+	  18 Input      5 Bit        Muxes := 1     
+	  12 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 1     
+	  13 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 64    
+	   4 Input      1 Bit        Muxes := 6     
+	   5 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 2     
+	  17 Input      1 Bit        Muxes := 3     
+	  14 Input      1 Bit        Muxes := 3     
+	  16 Input      1 Bit        Muxes := 2     
+	  12 Input      1 Bit        Muxes := 2     
+	  13 Input      1 Bit        Muxes := 3     
+	  15 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module factorise 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   6 Input     32 Bit        Muxes := 1     
+	   6 Input     10 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 30    
+	  18 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	  13 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 34    
+	  14 Input      1 Bit        Muxes := 3     
+	  16 Input      1 Bit        Muxes := 2     
+	  12 Input      1 Bit        Muxes := 2     
+	  13 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 4     
+	  15 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 1     
+Module sendMessage 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module readinput 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 23    
+	   5 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+Module ascii2vector 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	  12 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module mux_generic_AB 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module mux_generic_AB__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module divtest 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module divtest__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "GEN_DivTest[0].DivTestX/s_perfect" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "GEN_DivTest[1].DivTestX/s_perfect" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "s_readinput_begin_process" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_send_message_trigger" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_send_message_start_addr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_sendresult_mux_priority" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_asc2vec_trigger" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_asc2vec_reset" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element v_readout_bit_number_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:425]
+WARNING: [Synth 8-6014] Unused sequential element v_division_count_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:214]
+WARNING: [Synth 8-6014] Unused sequential element v_count_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element s_req_addr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/sendMessage.vhd:65]
+WARNING: [Synth 8-6014] Unused sequential element v_count_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:88]
+WARNING: [Synth 8-6014] Unused sequential element s_wr_ramaddr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element s_rd_ramaddr_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/readinput.vhd:125]
+INFO: [Synth 8-5587] ROM size for "ascii2vector_i/v_digit" is below threshold of ROM address width. It will be mapped to LUTs
+WARNING: [Synth 8-6014] Unused sequential element v_division_count_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:214]
+WARNING: [Synth 8-6014] Unused sequential element v_readout_bit_number_reg was removed.  [C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/new/factorise.vhd:425]
+INFO: [Synth 8-3886] merging instance 's_send_message_start_addr_reg[0]' (FDE) to 's_send_message_start_addr_reg[6]'
+INFO: [Synth 8-3886] merging instance 's_send_message_start_addr_reg[1]' (FDE) to 's_send_message_start_addr_reg[6]'
+INFO: [Synth 8-3886] merging instance 's_send_message_start_addr_reg[2]' (FDE) to 's_send_message_start_addr_reg[6]'
+INFO: [Synth 8-3886] merging instance 's_send_message_start_addr_reg[3]' (FDE) to 's_send_message_start_addr_reg[6]'
+INFO: [Synth 8-3886] merging instance 's_send_message_start_addr_reg[4]' (FDE) to 's_send_message_start_addr_reg[6]'
+INFO: [Synth 8-3886] merging instance 's_send_message_start_addr_reg[5]' (FDE) to 's_send_message_start_addr_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_send_message_start_addr_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (plusOp_inferred/\v_division_count_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (v_division_count_reg[0]) is unused and will be removed from module factorise.
+WARNING: [Synth 8-3332] Sequential element (s_send_message_start_addr_reg[6]) is unused and will be removed from module factorise.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 673.676 ; gain = 424.105
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 673.676 ; gain = 424.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 685.328 ; gain = 435.758
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 685.328 ; gain = 435.758
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 685.328 ; gain = 435.758
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 685.328 ; gain = 435.758
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 685.328 ; gain = 435.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 685.328 ; gain = 435.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 685.328 ; gain = 435.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 685.328 ; gain = 435.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |stringsrom_blk_mem_gen_0_0    |         1|
+|2     |dataentry_ram_blk_mem_gen_0_0 |         1|
+|3     |uart_UART_0_0                 |         1|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------------------+------+
+|      |Cell                               |Count |
++------+-----------------------------------+------+
+|1     |dataentry_ram_blk_mem_gen_0_0_bbox |     1|
+|2     |stringsrom_blk_mem_gen_0_0_bbox    |     1|
+|3     |uart_UART_0_0_bbox                 |     1|
+|4     |BUFG                               |     1|
+|5     |CARRY4                             |    82|
+|6     |LUT1                               |   215|
+|7     |LUT2                               |    67|
+|8     |LUT3                               |    81|
+|9     |LUT4                               |    45|
+|10    |LUT5                               |    56|
+|11    |LUT6                               |   151|
+|12    |MUXF7                              |    10|
+|13    |MUXF8                              |     1|
+|14    |FDRE                               |   266|
+|15    |FDSE                               |     3|
+|16    |LD                                 |     2|
+|17    |IBUF                               |     2|
+|18    |OBUF                               |    17|
++------+-----------------------------------+------+
+
+Report Instance Areas: 
++------+----------------------------+-------------------------------+------+
+|      |Instance                    |Module                         |Cells |
++------+----------------------------+-------------------------------+------+
+|1     |top                         |                               |  1025|
+|2     |  stringsrom_i              |stringsrom                     |     8|
+|3     |  dataentry_ram_i           |dataentry_ram                  |     8|
+|4     |  uart_i                    |uart                           |    10|
+|5     |  \GEN_DivTest[0].DivTestX  |divtest                        |    27|
+|6     |  \GEN_DivTest[1].DivTestX  |divtest__parameterized1        |    51|
+|7     |  UART_din_mux              |mux_generic_AB                 |     3|
+|8     |  UART_send_now_mux         |mux_generic_AB__parameterized1 |     2|
+|9     |  ascii2vector_i            |ascii2vector                   |    34|
+|10    |  readinput_i               |readinput                      |   243|
+|11    |  sendmessage_i             |sendMessage                    |   212|
++------+----------------------------+-------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 685.328 ; gain = 435.758
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 685.328 ; gain = 131.793
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 685.328 ; gain = 435.758
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 86 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  LD => LDCE: 2 instances
+
+82 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 685.328 ; gain = 446.680
+INFO: [Common 17-1381] The checkpoint 'C:/Users/tim/fpgaprojects/factorise2/factorise2.runs/synth_1/factorise.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 685.328 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 28 20:59:00 2017...

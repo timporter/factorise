@@ -33,11 +33,18 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity factorise is
 
+  -- 64 operand width
+  --    can use 68 dividers, maybe a couple more. Can't use 70 (68 = 20559 LUT, 69 = 20867 LUT, 70 = 21206 LUT)
+  -- 70 operand width
+  --    can use 62 dividers. can't use 63 (63 = 20965 LUT, 66 = 21840 LUT, 68 = 23078 LUT)
+  --    590295810358705651649 21s big factors  25s with new style divider
+  --    590295810358705651693 311s prime       
+  --    999999999999999989    260s prime
     
   Generic (
-    OPERAND_WIDTH : integer := 64; -- Even values only
-    DIVIDER_WIDTH : integer := 32; -- According to my calculations this should be set to exactly OPERAND_WIDTH/2 , but who knows!
-    DIVIDER_COUNT : integer := 68  -- Degree of parallelism required.
+    OPERAND_WIDTH : integer := 70; -- Even values only
+    DIVIDER_WIDTH : integer := 35; -- According to my calculations this should be set to exactly OPERAND_WIDTH / 2 , but who knows!
+    DIVIDER_COUNT : integer := 62  -- was too high, requires 21840 of 20800  -- 70 was too high, 23078 of 20800  -- 68 Degree of parallelism required.
   );
   Port (
     clk  : in  STD_LOGIC;
@@ -49,6 +56,7 @@ end factorise;
 
 architecture Behavioral of factorise is
     signal s_debug           : STD_LOGIC_VECTOR(15 downto 0) := X"0000";
+    signal s_debug_count     : STD_LOGIC_VECTOR(15 downto 0) := X"0000";
     
     signal s_sendresult_mux_priority : STD_LOGIC := '0';
     signal s_sendresult_message      : STD_LOGIC_VECTOR(7 downto 0) := X"00";
@@ -110,11 +118,11 @@ architecture Behavioral of factorise is
              din             : in  STD_LOGIC_VECTOR (7 downto 0); -- Data from external circuit (uart)
              uart_read_ack   : out STD_LOGIC;
              wr_ramdata      : out STD_LOGIC_VECTOR (7 downto 0); -- RAM data we want to write
-             wr_ramaddr      : out STD_LOGIC_VECTOR (4 downto 0); -- RAM address we want to write to
+             wr_ramaddr      : out STD_LOGIC_VECTOR (7 downto 0); -- RAM address we want to write to
              wr_we           : out STD_LOGIC_VECTOR (0 downto 0); -- RAM write enable
              advance_char    : in  STD_LOGIC;                     -- When reading back, a HI signal here tells this to move to the next character
              rd_ramdata      : in  STD_LOGIC_VECTOR (7 downto 0); -- Data from RAM
-             rd_ramaddr      : out STD_LOGIC_VECTOR (4 downto 0); -- RAM address we want to read from
+             rd_ramaddr      : out STD_LOGIC_VECTOR (7 downto 0); -- RAM address we want to read from
              char_ready      : out STD_LOGIC;                     -- We output HI here to inform external circuit we now have the correct value on dout
              dout            : out STD_LOGIC_VECTOR (7 downto 0); -- The relevant character in the message
              msg_ready       : out STD_LOGIC;                     -- Outputs HI to signal that we have received a full message and are ready to output it
@@ -151,18 +159,18 @@ architecture Behavioral of factorise is
     end component mux_generic_AB;
   
   signal s_dataentry_write_data : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
-  signal s_dataentry_write_addr : STD_LOGIC_VECTOR(4 downto 0) := (others => '0');
+  signal s_dataentry_write_addr : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
   signal s_dataentry_write_we   : STD_LOGIC_VECTOR(0 downto 0) := "0";
   signal s_dataentry_read_data  : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
-  signal s_dataentry_read_addr  : STD_LOGIC_VECTOR(4 downto 0) := (others => '0');
+  signal s_dataentry_read_addr  : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
   component dataentry_ram is
     port ( -- A is write, B is read
-      BRAM_PORTA_addr : in  STD_LOGIC_VECTOR(4 downto 0);
+      BRAM_PORTA_addr : in  STD_LOGIC_VECTOR(7 downto 0);
       BRAM_PORTA_clk  : in  STD_LOGIC;
       BRAM_PORTA_din  : in  STD_LOGIC_VECTOR(7 downto 0);
       BRAM_PORTA_en   : in  STD_LOGIC;
       BRAM_PORTA_we   : in  STD_LOGIC_VECTOR(0 downto 0);
-      BRAM_PORTB_addr : in  STD_LOGIC_VECTOR(4 downto 0);
+      BRAM_PORTB_addr : in  STD_LOGIC_VECTOR(7 downto 0);
       BRAM_PORTB_clk  : in  STD_LOGIC;
       BRAM_PORTB_dout : out STD_LOGIC_VECTOR(7 downto 0);
       BRAM_PORTB_en   : in  STD_LOGIC
@@ -209,7 +217,7 @@ begin
         DivTestX : divtest
         GENERIC MAP (
             OPERAND_WIDTH => OPERAND_WIDTH,
-            OFFSET        => mod_num
+            OFFSET        => (mod_num * 2)
         )
         PORT MAP (
             clk       => clk,
@@ -330,10 +338,13 @@ begin
         constant c_message_factorising_addr : STD_LOGIC_VECTOR(9 downto 0) := "0110000000"; -- Factorising
         constant c_message_wasprime_addr    : STD_LOGIC_VECTOR(9 downto 0) := "1000000000"; -- I didn't find any factors. I guess it was a prime
         constant c_message_foundfactor_addr : STD_LOGIC_VECTOR(9 downto 0) := "1010000000"; -- I found at least one factor. The factor I found is:
+        constant c_v_division_count_start   : STD_LOGIC_VECTOR(DIVIDER_WIDTH - 1 downto 0) := (1 => '1', 0 => '0', others => '0'); -- ie, 0000000010
         
         constant c_divider_count            : STD_LOGIC_VECTOR(DIVIDER_WIDTH - 1 downto 0) := std_logic_vector(to_unsigned(DIVIDER_COUNT, DIVIDER_WIDTH));
+        constant c_divider_count_double     : STD_LOGIC_VECTOR(DIVIDER_WIDTH - 1 downto 0) := std_logic_vector(to_unsigned(DIVIDER_COUNT * 2, DIVIDER_WIDTH));            
 
         variable v_factor                   : STD_LOGIC_VECTOR(DIVIDER_WIDTH - 1 downto 0) := (others => '0');
+        
         type t_state is (
             send_welcome,
             get_input, finish_get_input,
@@ -353,7 +364,6 @@ begin
         
     begin
         if (rising_edge(clk)) then
-            s_debug <= "0000000000000000";
             if (v_state = send_welcome) then            
                 -- send the welcome message, then move on
                 v_state := get_input;
@@ -437,7 +447,7 @@ begin
             elsif (v_state = display_on_uart) then
                 s_sendresult_mux_priority <= '1';
                 s_sendresult_send_now     <= '1';
-                if (s_asc2vec_dout( (OPERAND_WIDTH-1) - v_readout_bit_number) = '1') then
+                if (s_asc2vec_dout((OPERAND_WIDTH - 1) - v_readout_bit_number) = '1') then
                     s_sendresult_message <= "00110001";
                 else
                     s_sendresult_message <= "00110000";
@@ -462,20 +472,18 @@ begin
                 elsif (v_count = 50 and s_send_message_busy = '0') then
                     v_state                      := run_factorisation_delay;
                     v_count                      := 0;
-                    v_division_count             := (others => '0'); -- has width = DIVIDER_WIDTH
-                    v_division_count(1 downto 0) := "10"; -- We skip %0 and %1, go straight to %2
+                    v_division_count             := c_v_division_count_start; -- We skip %0 and %1, go straight to %2. So we're initially testing 2,4,6,8,10,12,14, etc, really we only care about the 2
                     v_half_way_there             := '0';
                     v_div_overflow               := '0';
                     s_divtest_top                <= s_asc2vec_dout;
-                    
                     s_divtest_bottom                             <= (others => '0');
                     s_divtest_bottom(DIVIDER_WIDTH - 1 downto 0) <= v_division_count;
-                    
+                    s_debug                      <= (others => '1');
                     s_divtest_trigger            <= '1';
                     v_is_prime                   := '1';
                 end if;
             elsif (v_state = run_factorisation_delay) then
-                -- We have to delay for the trigger to propagate
+                -- We have to delay for one clock cycle for the trigger to propagate
                 s_divtest_trigger <= '0';
                 v_state           := run_factorisation;
             elsif (v_state = run_factorisation) then
@@ -489,7 +497,21 @@ begin
                             v_state := prep_result;
                         else
                             -- We should try the next set of dividers
-                            v_division_count := v_division_count + c_divider_count;
+                            if (v_division_count = c_v_division_count_start) then
+                                -- We already tested a bunch of even numbers, 2,4,6,8,10,12 etc, now shift up to the odd numbers ,3,5,7,9,11,13 etc
+                                v_division_count := v_division_count + 1;
+                            else
+                                -- now move to the next odd numbers, 15,17,19,21,23 etc
+                                v_division_count := v_division_count + c_divider_count_double;
+                            end if;
+
+                            -- some pretty debug on the LEDs
+                            s_debug_count <= s_debug_count + "1";
+                            if (s_debug_count = "100000000000000") then
+                                s_debug <= s_debug + "1";
+                                s_debug_count <= (others => '0');
+                            end if;
+                            
                             if (v_half_way_there = '1' and v_division_count(DIVIDER_WIDTH - 1) = '0') then
                                 -- We've looped round, complete this final round of division and then bail out.
                                 v_div_overflow := '1';
@@ -498,9 +520,10 @@ begin
                             if (v_division_count(DIVIDER_WIDTH - 1) = '1') then
                                 v_half_way_there := '1';
                             end if;
+                            
                             s_divtest_bottom(DIVIDER_WIDTH - 1 downto 0) <= v_division_count; -- Top bits should already by zero
-                            s_divtest_trigger                            <= '1';
-                            v_state                                      := run_factorisation_delay;
+                            s_divtest_trigger <= '1';
+                            v_state           := run_factorisation_delay;
                         end if;
                     else
                         -- something actually matched, we found a factor
@@ -508,19 +531,20 @@ begin
                     end if;
                 end if;
             elsif (v_state = prep_result) then
-                -- Use v_count to loop through all the bits in the perfect vector
+                -- We get to the state when either we find a perfect division, or we exhaust the search space
+                -- So we don't yet know if we found a prime or not.
                 if (s_divtest_perfect = c_divtest_lo_mask) then
                     -- It was a prime
                     v_is_prime := '1';
                     v_state    := result_message;
                 else
+                    -- Use v_count to loop through all the bits in the perfect vector
                     -- Go from LSB to MSB
                     if (s_divtest_perfect(v_count) = '1') then
                         -- we found it
                         -- The factor is v_count plus whatever the offset originally was
-                        v_factor            := v_division_count + std_logic_vector(to_unsigned(v_count, DIVIDER_WIDTH));
-                        -- s_debug(15 downto 8) <= v_division_count;
-                        -- s_debug(15 downto 0) <= v_division_count + std_logic_vector(to_unsigned(v_count, DIVIDER_WIDTH));
+                        -- We need to multiply v_count by two as the dividers are initialised to not check even numbers (apart from first pass)
+                        v_factor            := v_division_count + std_logic_vector(to_unsigned(v_count * 2, DIVIDER_WIDTH));
                         v_is_prime          := '0';
                         v_state             := result_message;
                     else

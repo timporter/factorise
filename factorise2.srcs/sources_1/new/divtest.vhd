@@ -51,9 +51,9 @@ architecture Behavioral of divtest is
     signal   s_ready             : STD_LOGIC                                    := '1';
     signal   s_inter             : STD_LOGIC_VECTOR(OPERAND_WIDTH - 1 downto 0) := (others => '0');
     signal   s_bottom            : STD_LOGIC_VECTOR(OPERAND_WIDTH - 1 downto 0) := (others => '0');
-    -- signal   s_count             : STD_LOGIC_VECTOR(15 downto 0)                := (others => '0'); -- debug, can be removed
+    -- signal   s_count             : STD_LOGIC_VECTOR(15 downto 0)             := (others => '0'); -- debug, can be removed
     signal   s_top_shift         : integer range 0 to (OPERAND_WIDTH - 1)       := 0;
-    signal   s_bottom_shift      : integer range 0 to (OPERAND_WIDTH - 1)       := 0;
+    signal   s_bottom_shift      : integer range 0 to (OPERAND_WIDTH - 1)       := 0; -- Possibly this range can be reduced, how does VHDL handle the addition later if so?
     signal   s_iterations_needed : integer range 0 to (OPERAND_WIDTH - 1)       := 0; 
     constant c_zero              : STD_LOGIC_VECTOR(OPERAND_WIDTH - 1 downto 0) := (others => '0');
     
@@ -86,7 +86,7 @@ begin
                 end if;
             elsif (v_state = calculate_shifts) then
                 -- s_count <= s_count + 1; -- debug, can be removed
-                -- first we need to identify how many leading zeros the top part has
+                -- first we need to identify where the leading bit of each of the two operands is
                 if (top(s_top_shift) /= '1') then
                     s_top_shift <= s_top_shift - 1;
                 end if;
@@ -96,6 +96,8 @@ begin
                 end if;
                 -- we found the leading bit of each vector
                 if (top(s_top_shift) = '1' and bottom(s_bottom_shift) = '1') then
+                    -- The shift value are badly named, they are not the number of places the vector needs to be shifted
+                    -- They are the offset of the first HI bit.
                     v_state := apply_shifts;
                 end if;
             elsif (v_state = apply_shifts) then
@@ -112,6 +114,7 @@ begin
                 -- s_count <= s_count + 1; -- debug, can be removed
                 if (s_inter = c_zero) then
                     -- somehow we found an exact division, job done.
+                    -- We can even exit early at this point if the condition is true.
                     s_perfect <= '1';
                     s_ready   <= '1';
                     v_state   := waiting;
@@ -122,9 +125,9 @@ begin
                         v_state   := waiting;
                     else
                         if (s_inter >= s_bottom) then
-                            s_inter <= s_inter - s_bottom;
+                            s_inter <= s_inter - s_bottom; 
                         end if;
-                        s_bottom <= "0" & s_bottom(OPERAND_WIDTH - 1 downto 1); -- shifting back the other way
+                            s_bottom <= "0" & s_bottom(OPERAND_WIDTH - 1 downto 1); -- shifting back the other way
                         s_iterations_needed <= s_iterations_needed - 1;
                     end if;
                 end if;

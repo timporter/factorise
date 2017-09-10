@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="dataentry_ram_blk_mem_gen_0_0_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1502830965">
-  <File Type="PA-TCL" Name="dataentry_ram_blk_mem_gen_0_0.tcl"/>
+<GenRun Id="dataentry_ram_blk_mem_gen_0_0_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1504561585">
   <File Type="RDS-PROPCONSTRS" Name="dataentry_ram_blk_mem_gen_0_0_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="dataentry_ram_blk_mem_gen_0_0.tcl"/>
   <File Type="RDS-RDS" Name="dataentry_ram_blk_mem_gen_0_0.vds"/>
   <File Type="RDS-UTIL" Name="dataentry_ram_blk_mem_gen_0_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="dataentry_ram_blk_mem_gen_0_0_utilization_synth.pb"/>

@@ -176,7 +176,7 @@ CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
 CONFIG.Register_PortB_Output_of_Memory_Primitives {true} \
 CONFIG.Use_Byte_Write_Enable {false} \
 CONFIG.Use_RSTA_Pin {false} \
-CONFIG.Write_Depth_A {32} \
+CONFIG.Write_Depth_A {256} \
 CONFIG.Write_Width_A {8} \
 CONFIG.Write_Width_B {8} \
 CONFIG.use_bram_block {Stand_Alone} \

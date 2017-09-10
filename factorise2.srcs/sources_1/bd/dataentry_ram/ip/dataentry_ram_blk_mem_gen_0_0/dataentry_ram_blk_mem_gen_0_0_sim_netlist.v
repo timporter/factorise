@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Tue Aug 15 22:04:05 2017
+// Date        : Mon Sep  4 22:47:47 2017
 // Host        : timbox running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/dataentry_ram/ip/dataentry_ram_blk_mem_gen_0_0/dataentry_ram_blk_mem_gen_0_0_sim_netlist.v
@@ -27,15 +27,15 @@ module dataentry_ram_blk_mem_gen_0_0
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK" *) input clka;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA EN" *) input ena;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA WE" *) input [0:0]wea;
-  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *) input [4:0]addra;
+  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *) input [7:0]addra;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA DIN" *) input [7:0]dina;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB CLK" *) input clkb;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB EN" *) input enb;
-  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR" *) input [4:0]addrb;
+  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR" *) input [7:0]addrb;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB DOUT" *) output [7:0]doutb;
 
-  wire [4:0]addra;
-  wire [4:0]addrb;
+  wire [7:0]addra;
+  wire [7:0]addrb;
   wire clka;
   wire clkb;
   wire [7:0]dina;
@@ -56,16 +56,16 @@ module dataentry_ram_blk_mem_gen_0_0
   wire NLW_U0_s_axi_wready_UNCONNECTED;
   wire NLW_U0_sbiterr_UNCONNECTED;
   wire [7:0]NLW_U0_douta_UNCONNECTED;
-  wire [4:0]NLW_U0_rdaddrecc_UNCONNECTED;
+  wire [7:0]NLW_U0_rdaddrecc_UNCONNECTED;
   wire [3:0]NLW_U0_s_axi_bid_UNCONNECTED;
   wire [1:0]NLW_U0_s_axi_bresp_UNCONNECTED;
-  wire [4:0]NLW_U0_s_axi_rdaddrecc_UNCONNECTED;
+  wire [7:0]NLW_U0_s_axi_rdaddrecc_UNCONNECTED;
   wire [7:0]NLW_U0_s_axi_rdata_UNCONNECTED;
   wire [3:0]NLW_U0_s_axi_rid_UNCONNECTED;
   wire [1:0]NLW_U0_s_axi_rresp_UNCONNECTED;
 
-  (* C_ADDRA_WIDTH = "5" *) 
-  (* C_ADDRB_WIDTH = "5" *) 
+  (* C_ADDRA_WIDTH = "8" *) 
+  (* C_ADDRB_WIDTH = "8" *) 
   (* C_ALGORITHM = "1" *) 
   (* C_AXI_ID_WIDTH = "4" *) 
   (* C_AXI_SLAVE_TYPE = "0" *) 
@@ -112,8 +112,8 @@ module dataentry_ram_blk_mem_gen_0_0
   (* C_MEM_TYPE = "1" *) 
   (* C_MUX_PIPELINE_STAGES = "0" *) 
   (* C_PRIM_TYPE = "1" *) 
-  (* C_READ_DEPTH_A = "32" *) 
-  (* C_READ_DEPTH_B = "32" *) 
+  (* C_READ_DEPTH_A = "256" *) 
+  (* C_READ_DEPTH_B = "256" *) 
   (* C_READ_WIDTH_A = "8" *) 
   (* C_READ_WIDTH_B = "8" *) 
   (* C_RSTRAM_A = "0" *) 
@@ -130,8 +130,8 @@ module dataentry_ram_blk_mem_gen_0_0
   (* C_USE_URAM = "0" *) 
   (* C_WEA_WIDTH = "1" *) 
   (* C_WEB_WIDTH = "1" *) 
-  (* C_WRITE_DEPTH_A = "32" *) 
-  (* C_WRITE_DEPTH_B = "32" *) 
+  (* C_WRITE_DEPTH_A = "256" *) 
+  (* C_WRITE_DEPTH_B = "256" *) 
   (* C_WRITE_MODE_A = "NO_CHANGE" *) 
   (* C_WRITE_MODE_B = "WRITE_FIRST" *) 
   (* C_WRITE_WIDTH_A = "8" *) 
@@ -154,7 +154,7 @@ module dataentry_ram_blk_mem_gen_0_0
         .enb(enb),
         .injectdbiterr(1'b0),
         .injectsbiterr(1'b0),
-        .rdaddrecc(NLW_U0_rdaddrecc_UNCONNECTED[4:0]),
+        .rdaddrecc(NLW_U0_rdaddrecc_UNCONNECTED[7:0]),
         .regcea(1'b0),
         .regceb(1'b0),
         .rsta(1'b0),
@@ -184,7 +184,7 @@ module dataentry_ram_blk_mem_gen_0_0
         .s_axi_dbiterr(NLW_U0_s_axi_dbiterr_UNCONNECTED),
         .s_axi_injectdbiterr(1'b0),
         .s_axi_injectsbiterr(1'b0),
-        .s_axi_rdaddrecc(NLW_U0_s_axi_rdaddrecc_UNCONNECTED[4:0]),
+        .s_axi_rdaddrecc(NLW_U0_s_axi_rdaddrecc_UNCONNECTED[7:0]),
         .s_axi_rdata(NLW_U0_s_axi_rdata_UNCONNECTED[7:0]),
         .s_axi_rid(NLW_U0_s_axi_rid_UNCONNECTED[3:0]),
         .s_axi_rlast(NLW_U0_s_axi_rlast_UNCONNECTED),
@@ -220,13 +220,13 @@ module dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_generic_cstr
   input clka;
   input enb;
   input ena;
-  input [4:0]addrb;
-  input [4:0]addra;
+  input [7:0]addrb;
+  input [7:0]addra;
   input [7:0]dina;
   input [0:0]wea;
 
-  wire [4:0]addra;
-  wire [4:0]addrb;
+  wire [7:0]addra;
+  wire [7:0]addrb;
   wire clka;
   wire clkb;
   wire [7:0]dina;
@@ -263,13 +263,13 @@ module dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_prim_width
   input clka;
   input enb;
   input ena;
-  input [4:0]addrb;
-  input [4:0]addra;
+  input [7:0]addrb;
+  input [7:0]addra;
   input [7:0]dina;
   input [0:0]wea;
 
-  wire [4:0]addra;
-  wire [4:0]addrb;
+  wire [7:0]addra;
+  wire [7:0]addrb;
   wire clka;
   wire clkb;
   wire [7:0]dina;
@@ -306,8 +306,8 @@ module dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper
   input clka;
   input enb;
   input ena;
-  input [4:0]addrb;
-  input [4:0]addra;
+  input [7:0]addrb;
+  input [7:0]addra;
   input [7:0]dina;
   input [0:0]wea;
 
@@ -339,8 +339,8 @@ module dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper
   wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_n_5 ;
   wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_n_8 ;
   wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_n_9 ;
-  wire [4:0]addra;
-  wire [4:0]addrb;
+  wire [7:0]addra;
+  wire [7:0]addrb;
   wire clka;
   wire clkb;
   wire [7:0]dina;
@@ -451,8 +451,8 @@ module dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper
     .WRITE_WIDTH_A(0),
     .WRITE_WIDTH_B(36)) 
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram 
-       (.ADDRARDADDR({1'b0,1'b0,1'b0,1'b0,addrb,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .ADDRBWRADDR({1'b0,1'b0,1'b0,1'b0,addra,1'b0,1'b0,1'b0,1'b0,1'b0}),
+       (.ADDRARDADDR({1'b0,addrb,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .ADDRBWRADDR({1'b0,addra,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .CLKARDCLK(clkb),
         .CLKBWRCLK(clka),
         .DIADI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,dina[3:2],1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,dina[1:0]}),
@@ -491,13 +491,13 @@ module dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_top
   input clka;
   input enb;
   input ena;
-  input [4:0]addrb;
-  input [4:0]addra;
+  input [7:0]addrb;
+  input [7:0]addra;
   input [7:0]dina;
   input [0:0]wea;
 
-  wire [4:0]addra;
-  wire [4:0]addrb;
+  wire [7:0]addra;
+  wire [7:0]addrb;
   wire clka;
   wire clkb;
   wire [7:0]dina;
@@ -518,7 +518,7 @@ module dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_top
         .wea(wea));
 endmodule
 
-(* C_ADDRA_WIDTH = "5" *) (* C_ADDRB_WIDTH = "5" *) (* C_ALGORITHM = "1" *) 
+(* C_ADDRA_WIDTH = "8" *) (* C_ADDRB_WIDTH = "8" *) (* C_ALGORITHM = "1" *) 
 (* C_AXI_ID_WIDTH = "4" *) (* C_AXI_SLAVE_TYPE = "0" *) (* C_AXI_TYPE = "1" *) 
 (* C_BYTE_SIZE = "9" *) (* C_COMMON_CLK = "0" *) (* C_COUNT_18K_BRAM = "1" *) 
 (* C_COUNT_36K_BRAM = "0" *) (* C_CTRL_ECC_ALGO = "NONE" *) (* C_DEFAULT_DATA = "0" *) 
@@ -534,13 +534,13 @@ endmodule
 (* C_INITA_VAL = "0" *) (* C_INITB_VAL = "0" *) (* C_INIT_FILE = "NONE" *) 
 (* C_INIT_FILE_NAME = "no_coe_file_loaded" *) (* C_INTERFACE_TYPE = "0" *) (* C_LOAD_INIT_FILE = "0" *) 
 (* C_MEM_TYPE = "1" *) (* C_MUX_PIPELINE_STAGES = "0" *) (* C_PRIM_TYPE = "1" *) 
-(* C_READ_DEPTH_A = "32" *) (* C_READ_DEPTH_B = "32" *) (* C_READ_WIDTH_A = "8" *) 
+(* C_READ_DEPTH_A = "256" *) (* C_READ_DEPTH_B = "256" *) (* C_READ_WIDTH_A = "8" *) 
 (* C_READ_WIDTH_B = "8" *) (* C_RSTRAM_A = "0" *) (* C_RSTRAM_B = "0" *) 
 (* C_RST_PRIORITY_A = "CE" *) (* C_RST_PRIORITY_B = "CE" *) (* C_SIM_COLLISION_CHECK = "ALL" *) 
 (* C_USE_BRAM_BLOCK = "0" *) (* C_USE_BYTE_WEA = "0" *) (* C_USE_BYTE_WEB = "0" *) 
 (* C_USE_DEFAULT_DATA = "0" *) (* C_USE_ECC = "0" *) (* C_USE_SOFTECC = "0" *) 
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) 
-(* C_WRITE_DEPTH_A = "32" *) (* C_WRITE_DEPTH_B = "32" *) (* C_WRITE_MODE_A = "NO_CHANGE" *) 
+(* C_WRITE_DEPTH_A = "256" *) (* C_WRITE_DEPTH_B = "256" *) (* C_WRITE_MODE_A = "NO_CHANGE" *) 
 (* C_WRITE_MODE_B = "WRITE_FIRST" *) (* C_WRITE_WIDTH_A = "8" *) (* C_WRITE_WIDTH_B = "8" *) 
 (* C_XDEVICEFAMILY = "artix7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_3_6" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6
@@ -612,7 +612,7 @@ module dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6
   input ena;
   input regcea;
   input [0:0]wea;
-  input [4:0]addra;
+  input [7:0]addra;
   input [7:0]dina;
   output [7:0]douta;
   input clkb;
@@ -620,7 +620,7 @@ module dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6
   input enb;
   input regceb;
   input [0:0]web;
-  input [4:0]addrb;
+  input [7:0]addrb;
   input [7:0]dinb;
   output [7:0]doutb;
   input injectsbiterr;
@@ -628,7 +628,7 @@ module dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6
   input eccpipece;
   output sbiterr;
   output dbiterr;
-  output [4:0]rdaddrecc;
+  output [7:0]rdaddrecc;
   input sleep;
   input deepsleep;
   input shutdown;
@@ -669,11 +669,11 @@ module dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6
   input s_axi_injectdbiterr;
   output s_axi_sbiterr;
   output s_axi_dbiterr;
-  output [4:0]s_axi_rdaddrecc;
+  output [7:0]s_axi_rdaddrecc;
 
   wire \<const0> ;
-  wire [4:0]addra;
-  wire [4:0]addrb;
+  wire [7:0]addra;
+  wire [7:0]addrb;
   wire clka;
   wire clkb;
   wire [7:0]dina;
@@ -691,6 +691,9 @@ module dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6
   assign douta[2] = \<const0> ;
   assign douta[1] = \<const0> ;
   assign douta[0] = \<const0> ;
+  assign rdaddrecc[7] = \<const0> ;
+  assign rdaddrecc[6] = \<const0> ;
+  assign rdaddrecc[5] = \<const0> ;
   assign rdaddrecc[4] = \<const0> ;
   assign rdaddrecc[3] = \<const0> ;
   assign rdaddrecc[2] = \<const0> ;
@@ -708,6 +711,9 @@ module dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6
   assign s_axi_bresp[0] = \<const0> ;
   assign s_axi_bvalid = \<const0> ;
   assign s_axi_dbiterr = \<const0> ;
+  assign s_axi_rdaddrecc[7] = \<const0> ;
+  assign s_axi_rdaddrecc[6] = \<const0> ;
+  assign s_axi_rdaddrecc[5] = \<const0> ;
   assign s_axi_rdaddrecc[4] = \<const0> ;
   assign s_axi_rdaddrecc[3] = \<const0> ;
   assign s_axi_rdaddrecc[2] = \<const0> ;
@@ -762,13 +768,13 @@ module dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6_synth
   input clka;
   input enb;
   input ena;
-  input [4:0]addrb;
-  input [4:0]addra;
+  input [7:0]addrb;
+  input [7:0]addra;
   input [7:0]dina;
   input [0:0]wea;
 
-  wire [4:0]addra;
-  wire [4:0]addrb;
+  wire [7:0]addra;
+  wire [7:0]addrb;
   wire clka;
   wire clkb;
   wire [7:0]dina;

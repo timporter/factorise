@@ -308,38 +308,3 @@
        {divtest__parameterized121.v_state} \
        { }  \
        {{00 1000} {01 0001} {10 0010} {11 0100} }
-
- add_fsm_encoding \
-       {divtest__parameterized123.v_state} \
-       { }  \
-       {{00 1000} {01 0001} {10 0010} {11 0100} }
-
- add_fsm_encoding \
-       {divtest__parameterized125.v_state} \
-       { }  \
-       {{00 1000} {01 0001} {10 0010} {11 0100} }
-
- add_fsm_encoding \
-       {divtest__parameterized127.v_state} \
-       { }  \
-       {{00 1000} {01 0001} {10 0010} {11 0100} }
-
- add_fsm_encoding \
-       {divtest__parameterized129.v_state} \
-       { }  \
-       {{00 1000} {01 0001} {10 0010} {11 0100} }
-
- add_fsm_encoding \
-       {divtest__parameterized131.v_state} \
-       { }  \
-       {{00 1000} {01 0001} {10 0010} {11 0100} }
-
- add_fsm_encoding \
-       {divtest__parameterized133.v_state} \
-       { }  \
-       {{00 1000} {01 0001} {10 0010} {11 0100} }
-
- add_fsm_encoding \
-       {factorise.v_state} \
-       { }  \
-       {{00000 00000} {00001 00001} {00010 00010} {00011 00011} {00100 00100} {00101 10001} {00110 00101} {00111 00110} {01000 00111} {01001 01000} {01010 01001} {01011 01010} {01100 01011} {01101 01100} {01110 01101} {01111 01110} {10000 01111} {10001 10000} }

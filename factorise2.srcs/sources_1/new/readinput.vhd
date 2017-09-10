@@ -41,11 +41,11 @@ entity readinput is
         din             : in  STD_LOGIC_VECTOR (7 downto 0); -- Data from external circuit (uart)
         uart_read_ack   : out STD_LOGIC;                     -- ACK to external circuit that we got the current character
         wr_ramdata      : out STD_LOGIC_VECTOR (7 downto 0); -- RAM data we want to write
-        wr_ramaddr      : out STD_LOGIC_VECTOR (4 downto 0); -- RAM address we want to write to
+        wr_ramaddr      : out STD_LOGIC_VECTOR (7 downto 0); -- RAM address we want to write to
         wr_we           : out STD_LOGIC_VECTOR (0 downto 0); -- RAM write enable
         advance_char    : in  STD_LOGIC;                     -- When reading back, a HI signal here tells this to move to the next character 
         rd_ramdata      : in  STD_LOGIC_VECTOR (7 downto 0); -- Data from RAM
-        rd_ramaddr      : out STD_LOGIC_VECTOR (4 downto 0); -- RAM address we want to read from
+        rd_ramaddr      : out STD_LOGIC_VECTOR (7 downto 0); -- RAM address we want to read from
         char_ready      : out STD_LOGIC;                     -- We output HI here to inform external circuit we now have the correct value on dout 
         dout            : out STD_LOGIC_VECTOR (7 downto 0); -- The relevant character in the message
         msg_ready       : out STD_LOGIC;                     -- Outputs HI to signal that we have received a full message and are ready to output it
@@ -57,9 +57,9 @@ end readinput;
 
 architecture Behavioral of readinput is
     type t_state is (reset, readin_ready, readin_wait, readin_complete, readback_not_yet_ready, readback_ready, readback_complete);
-    signal s_wr_ramaddr    : STD_LOGIC_VECTOR(4 downto 0)  := (others => '0');
+    signal s_wr_ramaddr    : STD_LOGIC_VECTOR(7 downto 0)  := (others => '0');
     signal s_wr_ramdata    : STD_LOGIC_VECTOR(7 downto 0)  := (others => '0');
-    signal s_rd_ramaddr    : STD_LOGIC_VECTOR(4 downto 0)  := (others => '0');
+    signal s_rd_ramaddr    : STD_LOGIC_VECTOR(7 downto 0)  := (others => '0');
     signal s_dout          : STD_LOGIC_VECTOR(7 downto 0)  := (others => '0');
     signal s_msg_ready     : STD_LOGIC                     := '0';
     signal s_msg_ended     : STD_LOGIC                     := '0';
@@ -168,9 +168,9 @@ begin
         char_ready    <= s_char_ready;
         msg_ended     <= s_msg_ended;
         rd_ramaddr    <= s_rd_ramaddr;
-        s_debug(15 downto 11) <= s_rd_ramaddr;
-        s_debug(7  downto 3)  <= s_wr_ramaddr;
-        debug         <= s_debug;
+        --s_debug(15 downto 11) <= s_rd_ramaddr;
+        --s_debug(7  downto 3)  <= s_wr_ramaddr;
+        --debug         <= s_debug;
     end process;
 
 end Behavioral;

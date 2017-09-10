@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Tue Aug 15 22:04:06 2017
+-- Date        : Mon Sep  4 22:47:47 2017
 -- Host        : timbox running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/tim/fpgaprojects/factorise2/factorise2.srcs/sources_1/bd/dataentry_ram/ip/dataentry_ram_blk_mem_gen_0_0/dataentry_ram_blk_mem_gen_0_0_sim_netlist.vhdl
@@ -21,8 +21,8 @@ entity dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper is
     clka : in STD_LOGIC;
     enb : in STD_LOGIC;
     ena : in STD_LOGIC;
-    addrb : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    addra : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    addra : in STD_LOGIC_VECTOR ( 7 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
@@ -165,11 +165,11 @@ begin
       WRITE_WIDTH_B => 36
     )
         port map (
-      ADDRARDADDR(13 downto 10) => B"0000",
-      ADDRARDADDR(9 downto 5) => addrb(4 downto 0),
+      ADDRARDADDR(13) => '0',
+      ADDRARDADDR(12 downto 5) => addrb(7 downto 0),
       ADDRARDADDR(4 downto 0) => B"00000",
-      ADDRBWRADDR(13 downto 10) => B"0000",
-      ADDRBWRADDR(9 downto 5) => addra(4 downto 0),
+      ADDRBWRADDR(13) => '0',
+      ADDRBWRADDR(12 downto 5) => addra(7 downto 0),
       ADDRBWRADDR(4 downto 0) => B"00000",
       CLKARDCLK => clkb,
       CLKBWRCLK => clka,
@@ -241,8 +241,8 @@ entity dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_prim_width is
     clka : in STD_LOGIC;
     enb : in STD_LOGIC;
     ena : in STD_LOGIC;
-    addrb : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    addra : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    addra : in STD_LOGIC_VECTOR ( 7 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
@@ -254,8 +254,8 @@ architecture STRUCTURE of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_prim_width i
 begin
 \prim_noinit.ram\: entity work.dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper
      port map (
-      addra(4 downto 0) => addra(4 downto 0),
-      addrb(4 downto 0) => addrb(4 downto 0),
+      addra(7 downto 0) => addra(7 downto 0),
+      addrb(7 downto 0) => addrb(7 downto 0),
       clka => clka,
       clkb => clkb,
       dina(7 downto 0) => dina(7 downto 0),
@@ -276,8 +276,8 @@ entity dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_generic_cstr is
     clka : in STD_LOGIC;
     enb : in STD_LOGIC;
     ena : in STD_LOGIC;
-    addrb : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    addra : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    addra : in STD_LOGIC_VECTOR ( 7 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
@@ -289,8 +289,8 @@ architecture STRUCTURE of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_generic_cstr
 begin
 \ramloop[0].ram.r\: entity work.dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_prim_width
      port map (
-      addra(4 downto 0) => addra(4 downto 0),
-      addrb(4 downto 0) => addrb(4 downto 0),
+      addra(7 downto 0) => addra(7 downto 0),
+      addrb(7 downto 0) => addrb(7 downto 0),
       clka => clka,
       clkb => clkb,
       dina(7 downto 0) => dina(7 downto 0),
@@ -311,8 +311,8 @@ entity dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_top is
     clka : in STD_LOGIC;
     enb : in STD_LOGIC;
     ena : in STD_LOGIC;
-    addrb : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    addra : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    addra : in STD_LOGIC_VECTOR ( 7 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
@@ -324,8 +324,8 @@ architecture STRUCTURE of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_top is
 begin
 \valid.cstr\: entity work.dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_generic_cstr
      port map (
-      addra(4 downto 0) => addra(4 downto 0),
-      addrb(4 downto 0) => addrb(4 downto 0),
+      addra(7 downto 0) => addra(7 downto 0),
+      addrb(7 downto 0) => addrb(7 downto 0),
       clka => clka,
       clkb => clkb,
       dina(7 downto 0) => dina(7 downto 0),
@@ -346,8 +346,8 @@ entity dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6_synth is
     clka : in STD_LOGIC;
     enb : in STD_LOGIC;
     ena : in STD_LOGIC;
-    addrb : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    addra : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    addra : in STD_LOGIC_VECTOR ( 7 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
@@ -359,8 +359,8 @@ architecture STRUCTURE of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6_synth
 begin
 \gnbram.gnativebmg.native_blk_mem_gen\: entity work.dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_top
      port map (
-      addra(4 downto 0) => addra(4 downto 0),
-      addrb(4 downto 0) => addrb(4 downto 0),
+      addra(7 downto 0) => addra(7 downto 0),
+      addrb(7 downto 0) => addrb(7 downto 0),
       clka => clka,
       clkb => clkb,
       dina(7 downto 0) => dina(7 downto 0),
@@ -381,7 +381,7 @@ entity dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 is
     ena : in STD_LOGIC;
     regcea : in STD_LOGIC;
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
-    addra : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    addra : in STD_LOGIC_VECTOR ( 7 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
     douta : out STD_LOGIC_VECTOR ( 7 downto 0 );
     clkb : in STD_LOGIC;
@@ -389,7 +389,7 @@ entity dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 is
     enb : in STD_LOGIC;
     regceb : in STD_LOGIC;
     web : in STD_LOGIC_VECTOR ( 0 to 0 );
-    addrb : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     dinb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     doutb : out STD_LOGIC_VECTOR ( 7 downto 0 );
     injectsbiterr : in STD_LOGIC;
@@ -397,7 +397,7 @@ entity dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 is
     eccpipece : in STD_LOGIC;
     sbiterr : out STD_LOGIC;
     dbiterr : out STD_LOGIC;
-    rdaddrecc : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    rdaddrecc : out STD_LOGIC_VECTOR ( 7 downto 0 );
     sleep : in STD_LOGIC;
     deepsleep : in STD_LOGIC;
     shutdown : in STD_LOGIC;
@@ -438,12 +438,12 @@ entity dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 is
     s_axi_injectdbiterr : in STD_LOGIC;
     s_axi_sbiterr : out STD_LOGIC;
     s_axi_dbiterr : out STD_LOGIC;
-    s_axi_rdaddrecc : out STD_LOGIC_VECTOR ( 4 downto 0 )
+    s_axi_rdaddrecc : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute C_ADDRA_WIDTH : integer;
-  attribute C_ADDRA_WIDTH of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 5;
+  attribute C_ADDRA_WIDTH of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 8;
   attribute C_ADDRB_WIDTH : integer;
-  attribute C_ADDRB_WIDTH of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 5;
+  attribute C_ADDRB_WIDTH of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 8;
   attribute C_ALGORITHM : integer;
   attribute C_ALGORITHM of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_AXI_ID_WIDTH : integer;
@@ -537,9 +537,9 @@ entity dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 is
   attribute C_PRIM_TYPE : integer;
   attribute C_PRIM_TYPE of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_READ_DEPTH_A : integer;
-  attribute C_READ_DEPTH_A of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 32;
+  attribute C_READ_DEPTH_A of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 256;
   attribute C_READ_DEPTH_B : integer;
-  attribute C_READ_DEPTH_B of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 32;
+  attribute C_READ_DEPTH_B of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 256;
   attribute C_READ_WIDTH_A : integer;
   attribute C_READ_WIDTH_A of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 8;
   attribute C_READ_WIDTH_B : integer;
@@ -573,9 +573,9 @@ entity dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 is
   attribute C_WEB_WIDTH : integer;
   attribute C_WEB_WIDTH of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 1;
   attribute C_WRITE_DEPTH_A : integer;
-  attribute C_WRITE_DEPTH_A of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 32;
+  attribute C_WRITE_DEPTH_A of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 256;
   attribute C_WRITE_DEPTH_B : integer;
-  attribute C_WRITE_DEPTH_B of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 32;
+  attribute C_WRITE_DEPTH_B of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 256;
   attribute C_WRITE_MODE_A : string;
   attribute C_WRITE_MODE_A of dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is "NO_CHANGE";
   attribute C_WRITE_MODE_B : string;
@@ -604,6 +604,9 @@ begin
   douta(2) <= \<const0>\;
   douta(1) <= \<const0>\;
   douta(0) <= \<const0>\;
+  rdaddrecc(7) <= \<const0>\;
+  rdaddrecc(6) <= \<const0>\;
+  rdaddrecc(5) <= \<const0>\;
   rdaddrecc(4) <= \<const0>\;
   rdaddrecc(3) <= \<const0>\;
   rdaddrecc(2) <= \<const0>\;
@@ -621,6 +624,9 @@ begin
   s_axi_bresp(0) <= \<const0>\;
   s_axi_bvalid <= \<const0>\;
   s_axi_dbiterr <= \<const0>\;
+  s_axi_rdaddrecc(7) <= \<const0>\;
+  s_axi_rdaddrecc(6) <= \<const0>\;
+  s_axi_rdaddrecc(5) <= \<const0>\;
   s_axi_rdaddrecc(4) <= \<const0>\;
   s_axi_rdaddrecc(3) <= \<const0>\;
   s_axi_rdaddrecc(2) <= \<const0>\;
@@ -651,8 +657,8 @@ GND: unisim.vcomponents.GND
     );
 inst_blk_mem_gen: entity work.dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6_synth
      port map (
-      addra(4 downto 0) => addra(4 downto 0),
-      addrb(4 downto 0) => addrb(4 downto 0),
+      addra(7 downto 0) => addra(7 downto 0),
+      addrb(7 downto 0) => addrb(7 downto 0),
       clka => clka,
       clkb => clkb,
       dina(7 downto 0) => dina(7 downto 0),
@@ -671,11 +677,11 @@ entity dataentry_ram_blk_mem_gen_0_0 is
     clka : in STD_LOGIC;
     ena : in STD_LOGIC;
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
-    addra : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    addra : in STD_LOGIC_VECTOR ( 7 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
     clkb : in STD_LOGIC;
     enb : in STD_LOGIC;
-    addrb : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     doutb : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
@@ -702,17 +708,17 @@ architecture STRUCTURE of dataentry_ram_blk_mem_gen_0_0 is
   signal NLW_U0_s_axi_wready_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_sbiterr_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_douta_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal NLW_U0_rdaddrecc_UNCONNECTED : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal NLW_U0_rdaddrecc_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_U0_s_axi_bid_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_U0_s_axi_bresp_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal NLW_U0_s_axi_rdaddrecc_UNCONNECTED : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal NLW_U0_s_axi_rdaddrecc_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_U0_s_axi_rdata_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_U0_s_axi_rid_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_U0_s_axi_rresp_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute C_ADDRA_WIDTH : integer;
-  attribute C_ADDRA_WIDTH of U0 : label is 5;
+  attribute C_ADDRA_WIDTH of U0 : label is 8;
   attribute C_ADDRB_WIDTH : integer;
-  attribute C_ADDRB_WIDTH of U0 : label is 5;
+  attribute C_ADDRB_WIDTH of U0 : label is 8;
   attribute C_ALGORITHM : integer;
   attribute C_ALGORITHM of U0 : label is 1;
   attribute C_AXI_ID_WIDTH : integer;
@@ -806,9 +812,9 @@ architecture STRUCTURE of dataentry_ram_blk_mem_gen_0_0 is
   attribute C_PRIM_TYPE : integer;
   attribute C_PRIM_TYPE of U0 : label is 1;
   attribute C_READ_DEPTH_A : integer;
-  attribute C_READ_DEPTH_A of U0 : label is 32;
+  attribute C_READ_DEPTH_A of U0 : label is 256;
   attribute C_READ_DEPTH_B : integer;
-  attribute C_READ_DEPTH_B of U0 : label is 32;
+  attribute C_READ_DEPTH_B of U0 : label is 256;
   attribute C_READ_WIDTH_A : integer;
   attribute C_READ_WIDTH_A of U0 : label is 8;
   attribute C_READ_WIDTH_B : integer;
@@ -842,9 +848,9 @@ architecture STRUCTURE of dataentry_ram_blk_mem_gen_0_0 is
   attribute C_WEB_WIDTH : integer;
   attribute C_WEB_WIDTH of U0 : label is 1;
   attribute C_WRITE_DEPTH_A : integer;
-  attribute C_WRITE_DEPTH_A of U0 : label is 32;
+  attribute C_WRITE_DEPTH_A of U0 : label is 256;
   attribute C_WRITE_DEPTH_B : integer;
-  attribute C_WRITE_DEPTH_B of U0 : label is 32;
+  attribute C_WRITE_DEPTH_B of U0 : label is 256;
   attribute C_WRITE_MODE_A : string;
   attribute C_WRITE_MODE_A of U0 : label is "NO_CHANGE";
   attribute C_WRITE_MODE_B : string;
@@ -859,8 +865,8 @@ architecture STRUCTURE of dataentry_ram_blk_mem_gen_0_0 is
 begin
 U0: entity work.dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6
      port map (
-      addra(4 downto 0) => addra(4 downto 0),
-      addrb(4 downto 0) => addrb(4 downto 0),
+      addra(7 downto 0) => addra(7 downto 0),
+      addrb(7 downto 0) => addrb(7 downto 0),
       clka => clka,
       clkb => clkb,
       dbiterr => NLW_U0_dbiterr_UNCONNECTED,
@@ -874,7 +880,7 @@ U0: entity work.dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6
       enb => enb,
       injectdbiterr => '0',
       injectsbiterr => '0',
-      rdaddrecc(4 downto 0) => NLW_U0_rdaddrecc_UNCONNECTED(4 downto 0),
+      rdaddrecc(7 downto 0) => NLW_U0_rdaddrecc_UNCONNECTED(7 downto 0),
       regcea => '0',
       regceb => '0',
       rsta => '0',
@@ -904,7 +910,7 @@ U0: entity work.dataentry_ram_blk_mem_gen_0_0_blk_mem_gen_v8_3_6
       s_axi_dbiterr => NLW_U0_s_axi_dbiterr_UNCONNECTED,
       s_axi_injectdbiterr => '0',
       s_axi_injectsbiterr => '0',
-      s_axi_rdaddrecc(4 downto 0) => NLW_U0_s_axi_rdaddrecc_UNCONNECTED(4 downto 0),
+      s_axi_rdaddrecc(7 downto 0) => NLW_U0_s_axi_rdaddrecc_UNCONNECTED(7 downto 0),
       s_axi_rdata(7 downto 0) => NLW_U0_s_axi_rdata_UNCONNECTED(7 downto 0),
       s_axi_rid(3 downto 0) => NLW_U0_s_axi_rid_UNCONNECTED(3 downto 0),
       s_axi_rlast => NLW_U0_s_axi_rlast_UNCONNECTED,
